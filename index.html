@@ -21,34 +21,11 @@
             <div class="col span_1_of_3">
                 <p class="ssibal">ssib.al/</p>
                 <img class="arrow" src="./assets/images/arrow.svg">
-                <input type="text" id="custom" name="custom" class="input_custom" placeholder="Enable custom text"
-                       disabled>
+                <input type="text" id="custom" name="custom" class="input_custom" placeholder="원하는 링크 이름(선택)">
             </div>
-            <div class="col span_2_of_3">
-                <div class="onoffswitch">
-                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
-                           onclick="toggle()">
-                    <label class="onoffswitch-label" for="myonoffswitch"></label>
-                </div>
             </div>
         </div>
         <button type="submit" class="submit">링크 줄이기</button>
     </form>
-    <script>
-      function toggle () {
-        if (document.getElementById('myonoffswitch').checked) {
-          document.getElementById('custom').placeholder = '원하는 링크 이름'
-          document.getElementById('custom').disabled = false
-          document.getElementById('custom').focus()
-        }
-        else {
-          document.getElementById('custom').value = ''
-          document.getElementById('custom').placeholder = 'Enable custom text'
-          document.getElementById('custom').disabled = true
-          document.getElementById('custom').blur()
-          document.getElementById('input').focus()
-        }
-      }
-    </script>
 </body>
 </html>
