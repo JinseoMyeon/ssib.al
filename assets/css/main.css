@@ -8,6 +8,8 @@
 
 body {
     background-color: #f7f7f7;
+    width: auto;
+    height:fit-content;
 }
 
 h1 {
@@ -17,6 +19,11 @@ h1 {
     letter-spacing: -0.02em;
 
     color: #333333;
+}
+
+.bold {
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .input {
@@ -31,6 +38,10 @@ h1 {
     height: 60px;
     top: 545px;
     font-size: 20px;
+}
+
+.input::placeholder {
+    color:#cdcdcd
 }
 
 .inputsmall {
@@ -50,6 +61,7 @@ h1 {
 .inputsmall::placeholder {
     text-indent: 85px;
     text-align: left;
+    color:#cdcdcd
 }
 
 .arrow {
@@ -67,7 +79,8 @@ h1 {
     height: 12px;
     left: 115px;
     top: 625px;
-    z-index: 1;   
+    z-index: 1; 
+    color:#cdcdcd 
 }
 
 .submit {
@@ -180,6 +193,16 @@ h1 {
 
 .span_1_of_3 {
     width: 70%;
+}
+
+.bottomcard {
+    position: absolute;
+    width: 626px;
+    height: 100px;
+    left: 80px;
+    top: 950px;
+    border-radius: 20px 20px 0px 0px;
+    background: #FFFFFF;
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
