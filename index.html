@@ -9,6 +9,44 @@
     <title>URL shortener</title>
 </head>
 <body>
-    <p>test</p>
+    <br>
+    <center>
+    <h1>Test</h1>
+    <p class="urltext">단축할 링크 원본</p>
+    <form method="POST" action="functions/shorten.php">
+        <div class="section group">
+            <div class="col span_3_of_3">
+                <input type="url" id="input" value="https://" name="url" class="input" placeholder="단축하려는 링크를 입력해주세요.">
+            </div>
+            <div class="col span_1_of_3">
+                <input type="text" id="custom" name="custom" class="input_custom" placeholder="Enable custom text"
+                       disabled>
+            </div>
+            <div class="col span_2_of_3">
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
+                           onclick="toggle()">
+                    <label class="onoffswitch-label" for="myonoffswitch"></label>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="submit">링크 줄이기</button>
+    </form>
+    <script>
+      function toggle () {
+        if (document.getElementById('myonoffswitch').checked) {
+          document.getElementById('custom').placeholder = 'ssib.al/'
+          document.getElementById('custom').disabled = false
+          document.getElementById('custom').focus()
+        }
+        else {
+          document.getElementById('custom').value = ''
+          document.getElementById('custom').placeholder = 'Enable custom text'
+          document.getElementById('custom').disabled = true
+          document.getElementById('custom').blur()
+          document.getElementById('input').focus()
+        }
+      }
+    </script>
 </body>
 </html>
