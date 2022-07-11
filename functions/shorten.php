@@ -10,7 +10,7 @@ $insertCustom = false;
 
 $urlShortener = new UrlShortener();
 
-if (($_POST['onoffswitch'] == 'on') && (isset($_POST['custom']))) {
+if (!$_POST['custom'] == '') {
     $customCode = $_POST['custom'];
     
     if (!$urlShortener->checkUrlExistInDatabase($customCode)) {
@@ -48,7 +48,7 @@ if (isset($_POST['url']) && !$errors) {
     }
 }
 
-header("Location: ../index.html");
+header("Location: ../index.");
 exit();
 
 ?>
