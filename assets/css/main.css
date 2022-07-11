@@ -5,16 +5,10 @@
     padding: 0px;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    /*background-image: url(../img/a566df2b-7ce7-4f83-a490-5df2ef949817.png);*/
-    background-color: #f4f4f4;
-}
-
 h1 {
     text-align: center;
     font-size: 40px;
-    margin: 20px;
+    margin: 20px; 
     color: #167699;
 }
 
@@ -50,10 +44,6 @@ h1 {
     left: 115px;
     top: 556px;
     z-index: 1;   
-}
-
-.warning {
-    
 }
 
 .input_custom {
