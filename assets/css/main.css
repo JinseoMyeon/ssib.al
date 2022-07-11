@@ -1,31 +1,55 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 * {
     margin: 0px;
     padding: 0px;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
 }
 
 h1 {
-    text-align: center;
-    font-size: 40px;
-    margin: 20px; 
-    color: #167699;
+    position: absolute;
+    font-weight: 700;
+    font-size: 60px;
+    letter-spacing: -0.02em;
+
+    color: #333333;
 }
 
 .input {
     position: absolute;
-    width: 626px;
-    height: 60px;
-    left: 10em;
-    top: 30em;
     background: #FFFFFF;
     border-radius: 20px;
     border: 0px;
-    left: 80px;
-    top: 475px;
-    font-size: 20px;
     text-indent: 20px;
     font-weight: 400;
+    width: 626px;
+    left: 80px;
+    height: 60px;
+    top: 545px;
+    font-size: 20px;
+}
+
+.inputsmall {
+    position: absolute;
+    width: 626px;
+    height: 40px;
+    top: 615px;
+    left: 80px;
+    font-size: 16px;
+    text-indent: 85px;
+    text-align: left;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 0px;
+}
+
+.inputsmall::placeholder {
+    text-indent: 85px;
+    text-align: left;
 }
 
 .arrow {
@@ -33,7 +57,7 @@ h1 {
     width: 7px;
     height: 12px;
     left: 100px;
-    top: 559px;
+    top: 629px;
     z-index: 1;
 }
 
@@ -42,23 +66,8 @@ h1 {
     width: 7px;
     height: 12px;
     left: 115px;
-    top: 556px;
+    top: 625px;
     z-index: 1;   
-}
-
-.input_custom {
-    position: absolute;
-    width: 626px;
-    height: 40px;
-    left: 80px;
-    top: 545px;
-
-    background: #FFFFFF;
-    border-radius: 20px;
-    font-size: 16px;
-    text-indent: 87px;
-    font-weight: 400;
-    border: 0px;
 }
 
 .submit {
@@ -66,7 +75,7 @@ h1 {
     width: 150px;
     height: 45px;
     left: 80px;
-    top: 600px;
+    top: 670px;
 
     /* Blue */
 
@@ -111,72 +120,17 @@ h1 {
     color: #167699;
 }
 
-.onoffswitch {
-    position: relative;
-    width: 90px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.onoffswitch-checkbox {
-    display: none;
-}
-
-.onoffswitch-label {
-    display: block;
-    overflow: hidden;
-    cursor: pointer;
-    height: 30px;
-    padding: 0;
-    line-height: 30px;
-    border: 2px solid #999999;
-    border-radius: 30px;
-    background-color: #EEEEEE;
-    transition: background-color 0.3s ease-in;
-}
-
-.onoffswitch-label:before {
-    content: "";
-    display: block;
-    width: 30px;
-    margin: 0px;
-    background: #FFFFFF;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 58px;
-    border: 2px solid #999999;
-    border-radius: 30px;
-    transition: all 0.3s ease-in 0s;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label {
-    background-color: #167699;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
-    border-color: #167699;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label:before {
-    right: 0px;
-}
-
 .urltext {
     position: absolute;
     left: 80px;
-    top: 435px;
+    top: 509px;
 
-    font-weight: 700;
+    font-weight: 600;
     font-size: 22px;
     line-height: 26px;
     letter-spacing: -0.02em;
     text-align: left;
-/* Dark gray */
-
-color: #333333;
+    color: #333333;
 }
 
 /*  SECTIONS  */
