@@ -19,6 +19,8 @@
                 <input type="url" id="input" value="https://" name="url" class="input" placeholder="단축하려는 링크를 입력해주세요.">
             </div>
             <div class="col span_1_of_3">
+                <p class="ssibal">ssib.al/</p>
+                <img class="arrow" src="./assets/images/arrow.svg">
                 <input type="text" id="custom" name="custom" class="input_custom" placeholder="Enable custom text"
                        disabled>
             </div>
@@ -35,7 +37,7 @@
     <script>
       function toggle () {
         if (document.getElementById('myonoffswitch').checked) {
-          document.getElementById('custom').placeholder = 'ssib.al/'
+          document.getElementById('custom').placeholder = '원하는 링크 이름'
           document.getElementById('custom').disabled = false
           document.getElementById('custom').focus()
         }
