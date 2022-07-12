@@ -48,7 +48,7 @@ if (isset($_POST['url']) && !$errors) {
     }
 }
 
-header("Location: ../index.");
+header("Location: ../index.html");
 exit();
 
 ?>
