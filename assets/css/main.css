@@ -32,6 +32,13 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+    body {
+        position: absolute;
+        left: 50%;
+        margin-left: -360px;
+        
+    }
+
     h1 {
         position: absolute;
         font-weight: 700;
@@ -52,23 +59,23 @@ body {
         width: 150%;
         left: 25%;
         height: 8%;
-        top: 50%;
+        top: 55%;
         font-size: 1.75em;
     }
     
     .title {
         left: 25%;
-        top: 25%;
+        top: 30%;
     }
 
     .inputsmall {
         position: absolute;
         width: 150%;
-        height: 5%;
-        top: 60%;
+        height: 5.5%;
+        top: 65%;
         left: 25%;
         font-size: 1.25em;
-        text-indent: 5.8em;
+        text-indent: 5.9em;
         text-align: left;
         background: #FFFFFF;
         border-radius: 1.25em;
@@ -76,7 +83,7 @@ body {
         color: #333333;
     }
     .inputsmall::placeholder {
-        text-indent: 5.8em;
+        text-indent: 5.9em;
         text-align: left;
         color:#cdcdcd
     }
@@ -86,7 +93,7 @@ body {
         width: 12px;
         height: 16px;
         left: 32.5%;
-        top: 61.75%;
+        top: 67%;
         z-index: 1;
     }
     
@@ -95,7 +102,7 @@ body {
         width: 7px;
         height: 12px;
         left: 40%;
-        top: 61.25%;
+        top: 66.5%;
         font-size: 1.25em;
         z-index: 1; 
         color:#cdcdcd 
@@ -103,10 +110,10 @@ body {
 
     .submit {
         position: absolute;
-        width: 16.25%;
-        height: 6%;
-        left: 156%;
-        top: 51%;
+        width: 17.25%;
+        height: 6.5%;
+        left: 155.75%;
+        top: 55.75%;
     
         /* Blue */
     
@@ -126,7 +133,7 @@ body {
     .urltext {
         position: absolute;
         left: 25%;
-        top: 45%;
+        top: 50%;
     
         font-weight: 600;
         font-size: 1.375em;
