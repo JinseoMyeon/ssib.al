@@ -159,14 +159,6 @@ h1 {
     color: #333333;
 }
 
-.chain {
-    position: absolute;
-    left: 1026px;
-    top: 380px;
-    width: 334px;
-    height: 264px;
-}
-
 /*  SECTIONS  */
 .section {
     clear: both;
@@ -214,16 +206,6 @@ h1 {
 
 .span_1_of_3 {
     width: 70%;
-}
-
-.bottomcard {
-    position: absolute;
-    width: 626px;
-    height: 100px;
-    left: 80px;
-    top: 950px;
-    border-radius: 20px 20px 0px 0px;
-    background: #FFFFFF;
 }
 
 .github {
