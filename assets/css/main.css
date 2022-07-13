@@ -17,8 +17,12 @@
 
 body {
     background-color: #f7f7f7;
+    position: absolute;
+    left:50%;
+    margin-left: calc(1320px/-2);
     width: auto;
     height:fit-content;
+    white-space: nowrap;
 }
 
 h1 {
@@ -153,13 +157,6 @@ h1 {
     letter-spacing: -0.02em;
     text-align: left;
     color: #333333;
-}
-
-.center {
-    position: absolute;
-    left: 50%;
-    margin-left: calc(1440px/-2);
-    white-space:nowrap;
 }
 
 .chain {
