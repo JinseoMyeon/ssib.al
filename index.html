@@ -3,16 +3,17 @@
 <head>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="script" href="./assets/js/index.js">
-    <link rel="icon" href="http://ssib.al/test/assets/images/favicon.ico">
+    <link rel="icon" href="./assets/images/favicon.ico">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0, user-scalable=no, target-densitydpi=medium-dpi" />
     <title>씨발 | 링크 단축 서비스</title>
 </head>
 <body>
+    <div style="width:125%">
     <img src="./assets/images/ssibal.svg" class="ignore" style="position:absolute;top:80px;left:80px;">
-    <h1 style="left:80px;top:295px;" class="title ignore">한 번 들으면 잊을 수 없는<br>링크 단축 서비스.</h1>
-    <p class="urltext ignore">단축할 링크 원본</p>
+    <h1 style="left:80px;top:295px;" class="desktop-margin title ignore">한 번 들으면 잊을 수 없는<br>링크 단축 서비스.</h1>
+    <p class="desktop-margin urltext ignore">단축할 링크 원본</p>
     <form method="POST" action="functions/shorten.php">
         <div class="section group">
             <div class="col span_3_of_3">
@@ -30,8 +31,6 @@
         <img src="./assets/images/warning.svg" class="ignore">
         <p class="bold ignore" style="font-size:16px; margin-left:35px; margin-top:-25px; color:#333333;">이런 사이트는 링크를 단축할 수 없어요!</p>
     </div>
-    <a href="https://github.com/JinseoMyeon/ssib.al">
-        <img src="./assets/images/github.svg" style="width:35px;height:35px;" class="github ignore">
-    </a>
+    </div>
 </body>
 </html>

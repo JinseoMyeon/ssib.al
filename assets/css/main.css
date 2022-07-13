@@ -1,8 +1,8 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0em;
+    padding: 0em;
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
@@ -18,17 +18,13 @@
 body {
     background-color: #f7f7f7;
     position: absolute;
-    left:50%;
-    margin-left: calc(1440px/-2);
-    width: auto;
-    height:fit-content;
     white-space: nowrap;
 }
 
 h1 {
     position: absolute;
     font-weight: 700;
-    font-size: 60px;
+    font-size:  3.75em;
     letter-spacing: -0.02em;
 
     color: #333333;
@@ -42,14 +38,15 @@ h1 {
 .input {
     position: absolute;
     background: #FFFFFF;
-    border-radius: 20px;
-    border: 0px;
-    text-indent: 20px;
+    border-radius: 1.25em;
+    border: 0em;
+    text-indent: 1.25em;
     font-weight: 400;
-    width: 626px;
-    left: 80px;
+    width: 175%;
+    left: 25%;
+    right: 80px;
     height: 60px;
-    top: 545px;
+    top: 58%;
     font-size: 20px;
 }
 
@@ -59,20 +56,20 @@ h1 {
 
 .inputsmall {
     position: absolute;
-    width: 626px;
-    height: 40px;
-    top: 615px;
-    left: 80px;
-    font-size: 16px;
-    text-indent: 85px;
+    width: 175%;
+    height: 4.25%;
+    top: 65.5%;
+    left: 25%;
+    font-size: 1em;
+    text-indent: 5.75em;
     text-align: left;
     background: #FFFFFF;
-    border-radius: 20px;
+    border-radius: 1.25em;
     border: 0px;
 }
 
 .inputsmall::placeholder {
-    text-indent: 85px;
+    text-indent: 5.75em;
     text-align: left;
     color:#cdcdcd
 }
@@ -81,8 +78,8 @@ h1 {
     position: absolute;
     width: 7px;
     height: 12px;
-    left: 100px;
-    top: 629px;
+    left: 32.5%;
+    top: 67%;
     z-index: 1;
 }
 
@@ -90,70 +87,42 @@ h1 {
     position: absolute;
     width: 7px;
     height: 12px;
-    left: 115px;
-    top: 625px;
+    left: 37%;
+    top: 66.6%;
     z-index: 1; 
     color:#cdcdcd 
 }
 
 .submit {
     position: absolute;
-    width: 150px;
-    height: 45px;
-    left: 80px;
-    top: 670px;
+    width: 42.5%;
+    height: 5%;
+    left: 25%;
+    top: 71%;
 
     /* Blue */
 
     background: #297DFC;
-    border-radius: 20px;
-    border: 0px;
+    border-radius: 1.25em;
+    border: 0em;
 
     align-items: center;
     text-align: center;
     letter-spacing: -0.02em;
     /* White */
     color: #FFFFFF;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
 
-.alert {
-    font-size: 14px;
-    color: #000;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: #fff;
-    background-color: rgba(211, 47, 47, 1);
-}
-
-.success {
-    font-size: 14px;
-    color: #000;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: #fff;
-    background-color: lightgreen;
-    text-decoration: underline;
-}
-
-.success a {
-    color: #167699;
-}
-
 .urltext {
     position: absolute;
-    left: 80px;
-    top: 509px;
+    left: 25%;
+    top: 53.5%;
 
     font-weight: 600;
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 1.375em;
     letter-spacing: -0.02em;
     text-align: left;
     color: #333333;
@@ -162,7 +131,7 @@ h1 {
 /*  SECTIONS  */
 .section {
     clear: both;
-    padding: 0px;
+    padding: 0em;
     margin: auto;
     width: 50%;
 }
@@ -200,18 +169,12 @@ h1 {
 
 .span_2_of_3 {
     width: 20%;
-    margin-left: 20px;
+    margin-left: 1.25em;
 
 }
 
 .span_1_of_3 {
     width: 70%;
-}
-
-.github {
-    position: absolute;
-    left: 1325px;
-    top: 939px;
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
