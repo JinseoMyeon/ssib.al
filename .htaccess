@@ -1,5 +1,13 @@
-RewriteEngine on
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
 
-RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{ENV:HTTPS} !=on
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 RewriteRule ^(.*)$ functions/redirect.php?secret=$1 [L]
+</IfModule>
