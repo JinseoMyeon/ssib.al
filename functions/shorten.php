@@ -42,7 +42,7 @@ if (isset($_POST['url']) && !$errors) {
         }
         
         else {
-            header("Location: ../index.php?error=inurl");
+            header("Location: ../index.html"); #inurl
             die();
         }
     }
