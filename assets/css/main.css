@@ -19,7 +19,7 @@ body {
     background-color: #f7f7f7;
     position: absolute;
     left:50%;
-    margin-left: calc(1320px/-2);
+    margin-left: calc(1440px/-2);
     width: auto;
     height:fit-content;
     white-space: nowrap;
@@ -161,8 +161,10 @@ h1 {
 
 .chain {
     position: absolute;
-    left: 906px;
+    left: 1026px;
     top: 380px;
+    width: 334px;
+    height: 264px;
 }
 
 /*  SECTIONS  */
@@ -222,6 +224,14 @@ h1 {
     top: 950px;
     border-radius: 20px 20px 0px 0px;
     background: #FFFFFF;
+}
+
+.github {
+    position: absolute;
+    left: 1325px;
+    top: 939px;
+    width: 35px;
+    height: 35px;
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
