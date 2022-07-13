@@ -15,11 +15,90 @@
     -webkit-user-drag: none;
 }
 
+.bold {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.input::placeholder {
+    color:#cdcdcd
+}
+
+
 body {
     background-color: #f7f7f7;
     position: absolute;
     white-space: nowrap;
 }
+
+@media screen and (max-width: 767px) {
+    h1 {
+        position: absolute;
+        font-weight: 700;
+        font-size:  2.5em;
+        letter-spacing: -0.02em;
+    
+        color: #333333;
+    }
+
+    .input {
+        position: absolute;
+        background: #FFFFFF;
+        color: #333333;
+        border-radius: 1.25em;
+        border: 0em;
+        text-indent: 1em;
+        font-weight: 400;
+        width: 150%;
+        left: 25%;
+        height: 8%;
+        top: 50%;
+        font-size: 1.75em;
+    }
+    
+    .inputsmall {
+        position: absolute;
+        width: 150%;
+        height: 5%;
+        top: 60%;
+        left: 25%;
+        font-size: 1.25em;
+        text-indent: 5.8em;
+        text-align: left;
+        background: #FFFFFF;
+        border-radius: 1.25em;
+        border: 0px;
+        color: #333333;
+    }
+    .inputsmall::placeholder {
+        text-indent: 5.8em;
+        text-align: left;
+        color:#cdcdcd
+    }
+
+    .arrow {
+        position: absolute;
+        width: 12px;
+        height: 16px;
+        left: 32.5%;
+        top: 61.75%;
+        z-index: 1;
+    }
+    
+    .ssibal {
+        position: absolute;
+        width: 7px;
+        height: 12px;
+        left: 40%;
+        top: 61.25%;
+        font-size: 1.25em;
+        z-index: 1; 
+        color:#cdcdcd 
+    }
+}
+
+
+@media screen and (min-width: 768px) {
 
 h1 {
     position: absolute;
@@ -30,14 +109,10 @@ h1 {
     color: #333333;
 }
 
-.bold {
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
 .input {
     position: absolute;
     background: #FFFFFF;
+    color: #333333;
     border-radius: 1.25em;
     border: 0em;
     text-indent: 1.25em;
@@ -48,10 +123,6 @@ h1 {
     height: 60px;
     top: 58%;
     font-size: 20px;
-}
-
-.input::placeholder {
-    color:#cdcdcd
 }
 
 .inputsmall {
@@ -66,6 +137,7 @@ h1 {
     background: #FFFFFF;
     border-radius: 1.25em;
     border: 0px;
+    color: #333333;
 }
 
 .inputsmall::placeholder {
@@ -128,63 +200,4 @@ h1 {
     color: #333333;
 }
 
-/*  SECTIONS  */
-.section {
-    clear: both;
-    padding: 0em;
-    margin: auto;
-    width: 50%;
-}
-
-/*  COLUMN SETUP  */
-.col {
-    display: block;
-    float: left;
-    margin: 1% 0 1% 0;
-}
-
-.col:first-child {
-    margin-left: 0;
-}
-
-/*  GROUPING  */
-.group:before,
-.group:after {
-    content: "";
-    display: table;
-}
-
-.group:after {
-    clear: both;
-}
-
-.group {
-    zoom: 1; /* For IE 6/7 */
-}
-
-/*  GRID OF THREE  */
-.span_3_of_3 {
-    width: 100%;
-}
-
-.span_2_of_3 {
-    width: 20%;
-    margin-left: 1.25em;
-
-}
-
-.span_1_of_3 {
-    width: 70%;
-}
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-    .col {
-        margin: 1% 0 1% 0%;
-    }
-
-    .span_3_of_3, .span_2_of_3, .span_1_of_3 {
-        width: 100%;
-    }
 }

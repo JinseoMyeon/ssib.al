@@ -6,20 +6,20 @@
     <link rel="icon" href="./assets/images/favicon.ico">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0, user-scalable=no" />
     <title>씨발 | 링크 단축 서비스</title>
 </head>
 <body>
     <div style="width:125%">
     <img src="./assets/images/ssibal.svg" class="ignore" style="position:absolute;top:8.5%;left:25%;">
-    <h1 style="left:25%;top:30%;" class="desktop-margin title ignore">한 번 들으면 잊을 수 없는<br>링크 단축 서비스.</h1>
-    <p class="desktop-margin urltext ignore">단축할 링크 원본</p>
+    <h1 style="left:25%;top:30%;" class="dtitle ignore">한 번 들으면 잊을 수 없는<br>링크 단축 서비스.</h1>
+    <p class="urltext ignore">단축할 링크 원본</p>
     <form method="POST" action="functions/shorten.php">
-        <div class="section group">
-            <div class="col span_3_of_3">
+        <div>
+            <div>
                 <input type="url" id="input" value="https://" name="url" class="input" placeholder="단축하려는 링크를 입력해주세요.">
             </div>
-            <div class="col span_1_of_3">
+            <div>
                 <p class="ssibal ignore">ssib.al/</p>
                 <img class="arrow ignore" src="./assets/images/arrow.svg">
                 <input type="text" id="custom" name="custom" class="inputsmall" placeholder="원하는 링크 이름(선택)">
