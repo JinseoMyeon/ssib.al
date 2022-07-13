@@ -155,6 +155,19 @@ h1 {
     color: #333333;
 }
 
+.center {
+    position: absolute;
+    left: 50%;
+    margin-left: calc(1440px/-2);
+    white-space:nowrap;
+}
+
+.chain {
+    position: absolute;
+    left: 906px;
+    top: 380px;
+}
+
 /*  SECTIONS  */
 .section {
     clear: both;

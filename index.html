@@ -10,26 +10,28 @@
     <title>씨발 | 링크 단축 서비스</title>
 </head>
 <body>
-    <img src="./assets/images/ssibal.svg" class="ignore" style="position:absolute;top:80px;left:80px;">
-    <h1 style="left:80px;top:295px;" class="title ignore">한 번 들으면 잊을 수 없는<br>링크 단축 서비스.</h1>
-    <p class="urltext ignore">단축할 링크 원본</p>
-    <form method="POST" action="functions/shorten.php">
-        <div class="section group">
-            <div class="col span_3_of_3">
-                <input type="url" id="input" value="https://" name="url" class="input" placeholder="단축하려는 링크를 입력해주세요.">
+    <span class="center">
+        <img src="./assets/images/ssibal.svg" class="ignore" style="position:absolute;top:80px;left:80px;">
+        <h1 style="left:80px;top:295px;" class="title ignore">한 번 들으면 잊을 수 없는<br>링크 단축 서비스.</h1>
+        <p class="urltext ignore">단축할 링크 원본</p>
+        <form method="POST" action="functions/shorten.php">
+            <div class="section group">
+                <div class="col span_3_of_3">
+                    <input type="url" id="input" value="https://" name="url" class="input" placeholder="단축하려는 링크를 입력해주세요.">
+                </div>
+                <div class="col span_1_of_3">
+                    <p class="ssibal ignore">ssib.al/</p>
+                    <img class="arrow ignore" src="./assets/images/arrow.svg">
+                    <input type="text" id="custom" name="custom" class="inputsmall" placeholder="원하는 링크 이름(선택)">
+                </div>
             </div>
-            <div class="col span_1_of_3">
-                <p class="ssibal ignore">ssib.al/</p>
-                <img class="arrow ignore" src="./assets/images/arrow.svg">
-                <input type="text" id="custom" name="custom" class="inputsmall" placeholder="원하는 링크 이름(선택)">
-            </div>
-            </div>
+            <input type="submit" class="submit" value="링크 줄이기">
+        </form>
+        <div class="bottomcard ignore">
+            <img src="./assets/images/warning.svg" class="ignore" style="margin-left: 25px; margin-top: 25px;">
+            <p class="bold ignore" style="font-size:16px; margin-left:59px; margin-top:-26px;">이런 사이트는 링크를 단축할 수 없어요!</p>
         </div>
-        <input type="submit" class="submit" value="링크 줄이기">
-    </form>
-    <div class="bottomcard ignore">
-        <img src="./assets/images/warning.svg" class="ignore" style="margin-left: 25px; margin-top: 25px;">
-        <p class="bold ignore" style="font-size:16px; margin-left:59px; margin-top:-26px;">이런 사이트는 링크를 단축할 수 없어요!</p>
-    </div>
+        <img src="./assets/images/Chain.svg" class="chain ignore">
+    </span>
 </body>
 </html>
