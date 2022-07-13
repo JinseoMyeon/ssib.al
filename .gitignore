@@ -1,3 +1,4 @@
 database/
 config.php
 .DS_Store
+index.php
