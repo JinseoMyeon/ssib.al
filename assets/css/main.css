@@ -3,6 +3,8 @@
 * {
     margin: 0em;
     padding: 0em;
+    max-height: 100%;
+    width: auto;
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
@@ -33,10 +35,7 @@ body {
 
 @media screen and (max-width: 767px) {
     body {
-        position: absolute;
-        left: 50%;
-        margin-left: -360px;
-        
+        position:flex;
     }
 
     h1 {
@@ -115,15 +114,13 @@ body {
         left: 155.75%;
         top: 55.75%;
     
-        /* Blue */
-    
         background: #297DFC;
         border-radius: 2em;
         border: 0em;
     
         align-items: center;
         text-align: center;
-        /* White */
+
         color: #297dfc;
         font-size: 1.125em;
         font-weight: 700;
@@ -142,7 +139,6 @@ body {
         color: #333333;
     }
 }
-
 
 @media screen and (min-width: 768px) {
 
