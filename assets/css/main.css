@@ -47,6 +47,16 @@ body {
         color: #333333;
     }
 
+    .whitearrow {
+        z-index: 2;
+        position: absolute;
+        margin-left: 162.5%;
+        margin-top: -104%;
+        width: 16px;
+        height:20px;
+        stroke: #ffffff;
+    }
+
     .input {
         position: absolute;
         background: #FFFFFF;
@@ -228,6 +238,11 @@ h1 {
     font-size: 1.125em;
     font-weight: 700;
     letter-spacing: -0.02em;
+}
+
+.whitearrow {
+    opacity: 0;
+    z-index: 2;
 }
 
 .submitarrow {
