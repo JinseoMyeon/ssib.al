@@ -2,3 +2,5 @@ database/
 config.php
 .DS_Store
 index.php
+.htaccess
+.htaccess_ssibal
