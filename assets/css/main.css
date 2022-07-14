@@ -234,6 +234,10 @@ h1 {
     letter-spacing: -0.02em;
 }
 
+.submitarrow {
+    opacity: 0;
+}
+
 .urltext {
     position: absolute;
     left: 25%;
