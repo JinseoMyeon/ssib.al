@@ -35,7 +35,8 @@ body {
 
 @media screen and (max-width: 767px) {
     body {
-        position:flex;
+        position:absolute;
+        min-height: 100%;
     }
 
     h1 {
