@@ -36,7 +36,12 @@ body {
 @media screen and (max-width: 767px) {
     body {
         position:absolute;
-        min-height: 100%;
+    }
+
+    .logo {
+        position:absolute;
+        top:75px;
+        left:10vw;
     }
 
     h1 {
@@ -49,12 +54,12 @@ body {
     }
 
     .whitearrow {
-        z-index: 2;
+        z-index: 1;
         position: absolute;
-        margin-left: 162.5%;
-        margin-top: -104%;
+        right: 14.6vw;
+        top: 527px;
         width: 16px;
-        height:20px;
+        height: 20px;
         stroke: #ffffff;
     }
 
@@ -66,24 +71,25 @@ body {
         border: 0em;
         text-indent: 1em;
         font-weight: 400;
-        width: 150%;
-        left: 25%;
-        height: 8%;
-        top: 55%;
+        width: 80vw;
+        margin-left: 10vw;
+        height: 75px;
+        top: 500px;
         font-size: 1.75em;
     }
     
     .title {
-        left: 25%;
-        top: 30%;
+        left: 10vw;
+        top: 270px;
+        font-size: 3em;
     }
 
     .inputsmall {
         position: absolute;
-        width: 150%;
-        height: 5.5%;
-        top: 65%;
-        left: 25%;
+        width: 80vw;
+        height: 50px;
+        top: 590px;
+        left: 10vw;
         font-size: 1.25em;
         text-indent: 5.9em;
         text-align: left;
@@ -102,8 +108,9 @@ body {
         position: absolute;
         width: 12px;
         height: 16px;
-        left: 32.5%;
-        top: 67%;
+        margin-left: 10vw;
+        left: 27px;
+        top: 607px;
         z-index: 1;
     }
     
@@ -111,8 +118,9 @@ body {
         position: absolute;
         width: 7px;
         height: 12px;
-        left: 40%;
-        top: 66.5%;
+        margin-left: 10vw;
+        left: 55px;
+        top: 603px;
         font-size: 1.25em;
         z-index: 1; 
         color:#cdcdcd 
@@ -120,16 +128,14 @@ body {
 
     .submit {
         position: absolute;
-        width: 17.25%;
-        height: 6.5%;
-        left: 155.75%;
-        top: 55.75%;
+        width: 60px;
+        height: 60px;
+        top: 507px;
+        right: 11.5vw;
     
         background: #297DFC;
         border-radius: 2em;
         border: 0em;
-    
-        align-items: center;
         text-align: center;
 
         color: #297dfc;
@@ -140,8 +146,8 @@ body {
 
     .urltext {
         position: absolute;
-        left: 25%;
-        top: 50%;
+        left: 10vw;
+        top: 460px;
     
         font-weight: 600;
         font-size: 1.375em;
@@ -152,6 +158,10 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+body {
+    font-size: 16px;
+}
+
 
 h1 {
     position: absolute;
@@ -239,6 +249,10 @@ h1 {
     font-size: 1.125em;
     font-weight: 700;
     letter-spacing: -0.02em;
+}
+
+.logo {
+    position:absolute;top:8.5%;left:25%;
 }
 
 .whitearrow {

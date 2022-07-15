@@ -10,8 +10,8 @@
     <title>씨발 | 링크 단축 서비스</title>
 </head>
 <body>
-    <div style="width:125%">
-    <img src="./assets/images/ssibal.svg" class="ignore" style="position:absolute;top:8.5%;left:25%;">
+    <div style="width:100vw;">
+    <img src="./assets/images/ssibal.svg" class="ignore logo">
     <h1 class="title ignore">한 번 들으면 잊을 수 없는<br>링크 단축 서비스.</h1>
     <p class="urltext ignore">단축할 링크 원본</p>
     <form method="POST" action="functions/shorten.php">
@@ -25,8 +25,10 @@
                 <input type="text" id="custom" name="custom" class="inputsmall" placeholder="원하는 링크 이름(선택)">
             </div>
         </div>
+        <div>
             <input type="submit" class="submit" value="링크 줄이기">
             <img src="./assets/images/warrow.svg" class="whitearrow ignore">
+        </div>
     </form>
     <div style="margin-left:85px;margin-top:915px;">
         <img src="./assets/images/warning.svg" class="ignore">
