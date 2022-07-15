@@ -53,10 +53,11 @@ body {
         color: #333333;
     }
 
-    .whitearrow {
+    .warrow {
         z-index: 1;
         position: absolute;
-        right: 14.6vw;
+        left: 428px;
+        margin-left: 10vw;
         top: 527px;
         width: 16px;
         height: 20px;
@@ -70,8 +71,8 @@ body {
         border-radius: 1.25em;
         border: 0em;
         text-indent: 1em;
-        font-weight: 400;
-        width: 80vw;
+        font-weight: 500;
+        width: 475px;
         margin-left: 10vw;
         height: 75px;
         top: 500px;
@@ -86,21 +87,23 @@ body {
 
     .inputsmall {
         position: absolute;
-        width: 80vw;
+        width: 475px;
         height: 50px;
         top: 590px;
         left: 10vw;
         font-size: 1.25em;
-        text-indent: 5.9em;
+        text-indent: 6em;
         text-align: left;
         background: #FFFFFF;
         border-radius: 1.25em;
+        font-weight: 500;
         border: 0px;
         color: #333333;
     }
     .inputsmall::placeholder {
-        text-indent: 5.9em;
+        text-indent: 6em;
         text-align: left;
+        font-weight: 500;
         color:#cdcdcd
     }
 
@@ -121,6 +124,7 @@ body {
         margin-left: 10vw;
         left: 55px;
         top: 603px;
+        font-weight: 500;
         font-size: 1.25em;
         z-index: 1; 
         color:#cdcdcd 
@@ -130,8 +134,9 @@ body {
         position: absolute;
         width: 60px;
         height: 60px;
+        margin-left: 10vw;
         top: 507px;
-        right: 11.5vw;
+        left: 405px;
     
         background: #297DFC;
         border-radius: 2em;
@@ -154,6 +159,11 @@ body {
         letter-spacing: -0.02em;
         text-align: left;
         color: #333333;
+    }
+
+    .infodiv {
+        margin-left:10vw;
+        margin-top:750px;
     }
 }
 
@@ -255,7 +265,7 @@ h1 {
     position:absolute;top:8.5%;left:25%;
 }
 
-.whitearrow {
+.warrow {
     opacity: 0;
     z-index: 2;
 }
@@ -279,6 +289,11 @@ h1 {
 .title {
     left: 25%;
     top: 30%;
+}
+
+.infodiv {
+    margin-left:85px;
+    margin-top:915px;
 }
 
 }
