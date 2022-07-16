@@ -179,6 +179,7 @@ body {
 @media screen and (min-width: 768px) {
 body {
     font-size: 16px;
+    width: 100vw;
 }
 
 
@@ -199,22 +200,22 @@ h1 {
     border: 0em;
     text-indent: 1.25em;
     font-weight: 400;
-    width: 175%;
-    left: 25%;
+    width: 600px;
+    left: 10vw;
     right: 80px;
     height: 60px;
-    top: 58%;
-    font-size: 20px;
+    top: 555px;
+    font-size: 1.25em;
 }
 
 .inputsmall {
     position: absolute;
-    width: 175%;
-    height: 4.25%;
-    top: 65.5%;
-    left: 25%;
+    width: 600px;
+    height: 41px;
+    top: 627px;
+    left: 10vw;
     font-size: 1em;
-    text-indent: 5.75em;
+    text-indent: 5.85em;
     text-align: left;
     background: #FFFFFF;
     border-radius: 1.25em;
@@ -223,7 +224,7 @@ h1 {
 }
 
 .inputsmall::placeholder {
-    text-indent: 5.75em;
+    text-indent: 5.85em;
     text-align: left;
     color:#cdcdcd
 }
@@ -232,8 +233,9 @@ h1 {
     position: absolute;
     width: 7px;
     height: 12px;
-    left: 32.5%;
-    top: 67%;
+    margin-left: 10vw;
+    left:25px;
+    top: 642px;
     z-index: 1;
 }
 
@@ -241,18 +243,19 @@ h1 {
     position: absolute;
     width: 7px;
     height: 12px;
-    left: 37%;
-    top: 66.6%;
+    margin-left: 10vw;
+    left: 43px;
+    top: 638px;
     z-index: 1; 
     color:#cdcdcd 
 }
 
 .submit {
     position: absolute;
-    width: 42.5%;
-    height: 5%;
-    left: 25%;
-    top: 71%;
+    width: 150px;
+    height: 47px;
+    left: 10vw;
+    top: 681px;
 
     /* Blue */
 
@@ -271,7 +274,9 @@ h1 {
 }
 
 .logo {
-    position:absolute;top:8.5%;left:25%;
+    position:absolute;
+    top:100px;
+    left:10vw;
 }
 
 .warrow {
@@ -285,8 +290,8 @@ h1 {
 
 .urltext {
     position: absolute;
-    left: 25%;
-    top: 53.5%;
+    left: 10vw;
+    top: 510px;
 
     font-weight: 600;
     font-size: 1.375em;
@@ -296,13 +301,13 @@ h1 {
 }
 
 .title {
-    left: 25%;
-    top: 30%;
+    left: 10vw;
+    top: 290px;
 }
 
 .infodiv {
-    margin-left:85px;
-    margin-top:915px;
+    margin-left:10vw;
+    margin-top:800px;
 }
 
 }
