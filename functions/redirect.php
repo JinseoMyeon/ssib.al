@@ -11,7 +11,7 @@ if (isset($_GET['secret'])) {
     die();
 }
 
-header("Location: index.html");
+header("Location: index.php");
 die();
 
 ?>

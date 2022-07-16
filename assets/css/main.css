@@ -38,6 +38,27 @@ body {
         position:absolute;
     }
 
+    .success {
+        position: absolute;
+        font-size: 1.25em;
+        font-weight:600;
+        color:#333333;
+        margin-left: 10vw;
+        top:660px;
+        text-decoration: none;
+        text-decoration-color: #297DFC;
+    }
+    
+    .error {
+        position: absolute;
+        font-size: 1.25em;
+        font-weight:600;
+        color:#fe5151;
+        margin-left: 10vw;
+        left: 170px;
+        top:692px;
+    }
+
     .rightdiv {
         position: absolute;
         width:10vw;
@@ -325,6 +346,28 @@ h1 {
     height:40px;
     top:810px;
     right: 15vw;
+}
+
+.success {
+    position: absolute;
+    font-size: 1.25em;
+    font-weight:600;
+    color:#333333;
+    margin-left: 15vw;
+    left: 170px;
+    top:692px;
+    text-decoration: none;
+    text-decoration-color: #297DFC;
+}
+
+.error {
+    position: absolute;
+    font-size: 1.25em;
+    font-weight:600;
+    color:#fe5151;
+    margin-left: 15vw;
+    left: 170px;
+    top:692px;
 }
 
 }

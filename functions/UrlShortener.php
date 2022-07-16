@@ -9,7 +9,7 @@ class UrlShortener {
         $this->db = new mysqli(HOST_NAME, USER_NAME, USER_PASSWORD, DB_NAME);
         
         if ($this->db->connect_errno) {
-            header("Location: ../index.html");
+            header("Location: ../index.php?error=db");
             die();
         }
     }
@@ -40,7 +40,7 @@ class UrlShortener {
         $orignalURL = trim($orignalURL);
         
         if (!filter_var($orignalURL, FILTER_VALIDATE_URL)) {
-            header("Location: ../index.html"); #inurl
+            header("Location: ../index.php?error=inurl");
             die();
         }
         
@@ -103,7 +103,7 @@ class UrlShortener {
         }
         
         else {
-            header("Location: index.html"); #dnp
+            header("Location: index.php?error=dnp");
             die();
         }
     }
