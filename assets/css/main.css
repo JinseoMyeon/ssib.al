@@ -38,6 +38,14 @@ body {
         position:absolute;
     }
 
+    .rightdiv {
+        position: absolute;
+        width:10vw;
+        height:50px;
+        margin-left:537px;
+        top:0;
+    }
+
     .logo {
         position:absolute;
         top:75px;
@@ -74,6 +82,7 @@ body {
         font-weight: 500;
         width: 475px;
         margin-left: 10vw;
+        margin-right: 10vw;
         height: 75px;
         top: 500px;
         font-size: 1.75em;
