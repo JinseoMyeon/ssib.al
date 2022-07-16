@@ -174,6 +174,15 @@ body {
         margin-left:10vw;
         margin-top:750px;
     }
+
+    .github {
+        position: absolute;
+        width: 40px;
+        height:40px;
+        top:740px;
+        margin-left: 10vw;
+        left:435px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -201,7 +210,7 @@ h1 {
     text-indent: 1.25em;
     font-weight: 400;
     width: 600px;
-    left: 10vw;
+    left: 15vw;
     right: 80px;
     height: 60px;
     top: 555px;
@@ -213,7 +222,7 @@ h1 {
     width: 600px;
     height: 41px;
     top: 627px;
-    left: 10vw;
+    left: 15vw;
     font-size: 1em;
     text-indent: 5.85em;
     text-align: left;
@@ -233,7 +242,7 @@ h1 {
     position: absolute;
     width: 7px;
     height: 12px;
-    margin-left: 10vw;
+    margin-left: 15vw;
     left:25px;
     top: 642px;
     z-index: 1;
@@ -243,7 +252,7 @@ h1 {
     position: absolute;
     width: 7px;
     height: 12px;
-    margin-left: 10vw;
+    margin-left: 15vw;
     left: 43px;
     top: 638px;
     z-index: 1; 
@@ -254,7 +263,7 @@ h1 {
     position: absolute;
     width: 150px;
     height: 47px;
-    left: 10vw;
+    left: 15vw;
     top: 681px;
 
     /* Blue */
@@ -276,7 +285,7 @@ h1 {
 .logo {
     position:absolute;
     top:100px;
-    left:10vw;
+    left:15vw;
 }
 
 .warrow {
@@ -290,7 +299,7 @@ h1 {
 
 .urltext {
     position: absolute;
-    left: 10vw;
+    left: 15vw;
     top: 510px;
 
     font-weight: 600;
@@ -301,13 +310,21 @@ h1 {
 }
 
 .title {
-    left: 10vw;
+    left: 15vw;
     top: 290px;
 }
 
 .infodiv {
-    margin-left:10vw;
+    margin-left:15vw;
     margin-top:800px;
+}
+
+.github {
+    position: absolute;
+    width: 40px;
+    height:40px;
+    top:810px;
+    right: 15vw;
 }
 
 }
