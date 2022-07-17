@@ -10,7 +10,7 @@ $insertCustom = false;
 
 $urlShortener = new UrlShortener();
 
-if (isset($_POST['custom']) == "") {
+if (!$_POST['custom'] == '') {
     $customCode = $_POST['custom'];
     
     if (!$urlShortener->checkUrlExistInDatabase($customCode)) {
