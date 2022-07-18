@@ -19,7 +19,7 @@ if (!$_POST['custom'] == '') {
     
     else {
         $errors            = true;
-        $_SESSION['error'] = '<a href="' . BASE_URL . $_POST['custom'] . '">' . BASE_URL . $_POST['custom'] . "</a>는 이미 존재합니다.";
+        $_SESSION['error'] = '<a href="' . BASE_URL . $_POST['custom'] . '">' . "ssib.al/" . $_POST['custom'] . "</a>는 이미 존재합니다.";
     }
 }
 

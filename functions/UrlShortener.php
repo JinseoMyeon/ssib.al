@@ -132,7 +132,7 @@ class UrlShortener {
      */
     
     public function generateLinkForShortURL($uniqueCode = '') {
-        return '<a href="' . BASE_URL . $uniqueCode . '">' . BASE_URL . $uniqueCode . '</a>';
+        return '<a href="' . BASE_URL . $uniqueCode . '">' . "ssib.al/" . $uniqueCode . '</a>';
     }
 }
 
