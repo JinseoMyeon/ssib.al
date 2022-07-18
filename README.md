@@ -1,4 +1,5 @@
 <img src="https://user-images.githubusercontent.com/51117451/179329750-7fd78368-95fc-41dc-8456-b0f426ff786a.svg" style="width:50px;height:50px;"><br>**이건 욕이 아니에요.**<br>한 번 들으면 잊을 수 없는 링크 단축 서비스.
+##
 
 ### About This Service -
 이 사이트는 여러분이 아마도 생각나실 그 욕을 생각하면서 만든 링크 단축 서비스입니다. (도메인이 있더라고요...) bit.ly나 tinyurl 같은 서비스라고 이해하시면 됩니다.<br>bit.ly 같은 서비스와 실제로는 큰 차이 없으니 ~~링크를 감당할 자신만 있으시다면~~ 자유롭게 사용하시면 될 듯 합니다.
