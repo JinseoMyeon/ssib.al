@@ -1,4 +1,4 @@
-## ssib.al (씨발)
+##
 
 <img src="https://user-images.githubusercontent.com/51117451/179329750-7fd78368-95fc-41dc-8456-b0f426ff786a.svg" style="width:50px;height:50px;"><br>**이건 욕이 아니에요.**<br>한 번 들으면 잊을 수 없는 링크 단축 서비스.
 
@@ -12,4 +12,4 @@
 현재 링크 단축이 완료되었다는 메시지나 오류 발생 등을 표시하지 못하는 상황입니다. 빠른 시일 내로 수정할 예정이며, 수정되기 전에는 랜덤한 링크를 생성하셔도 사용할 수 없고, 오류가 나도 오류를 확인할 수 없기 때문에 링크를 보내시기 전 반드시 한 번 접속 확인을 해 주시기 바랍니다.
 
 ### Trivia -
-추후 링크 단축 시스템을 php에서 JavaScript로 옮길 예정에 있습니다. 언제 할 지는 잘 모르겠지만....<br>링크 단축 소스코드는 https://github.com/urls/url-shortener-php 에서 가져왔습니다.
+추후 링크 단축 시스템을 php에서 JavaScript로 옮길 예정에 있습니다. 언제 할 지는 잘 모르겠지만....<br>링크 단축 소스코드는 https://github.com/urls/url-shortener-php 에서 가져와 일부 수정을 거쳤습니다.
