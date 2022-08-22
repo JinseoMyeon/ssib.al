@@ -11,8 +11,10 @@
 </head>
 <body>
     <img src="./assets/images/ssibal.svg" class="ignore logo">
-    <h1 class="title ignore">한 번 들으면 잊을 수 없는<br>링크 단축 서비스.</h1>
-    <p class="urltext ignore">단축할 링크 원본</p>
+    <div class="description">
+        <h1 class="title ignore">한 번 들으면 잊을 수 없는<br>링크 단축 서비스.</h1>
+        <p class="urltext ignore">단축할 링크 원본</p>
+    </div>
     <form method="POST" action="functions/shorten.php">
         <div>
             <div>
@@ -24,16 +26,15 @@
                 <input type="text" id="custom" name="custom" class="inputsmall" placeholder="원하는 링크 이름(선택)">
             </div>
         </div>
-        <input type="submit" class="submit" value="링크 줄이기">
-        <img src="./assets/images/warrow.svg" class="warrow ignore">
+        <input type="submit" class="submit" id="shortenButton" value="링크 줄이기">
     </form>
-    <div class="infodiv">
-        <img src="./assets/images/warning.svg" class="ignore">
-        <p class="bold ignore" style="font-size:16px; margin-left:35px; margin-top:-25px; color:#333333;">이런 사이트는 링크를 단축할 수 없어요!</p>
-    </div>
     <a href="https://github.com/jinseomyeon/ssib.al">
         <img src="./assets/images/github.svg" class="github ignore">
     </a>
-    <div class="rightdiv"></div>
+    <div class="infodiv">
+        <img src="./assets/images/warning.svg" class="ignore">
+        <p class="bold ignore" style="font-size:1rem; margin-left:2rem; margin-top: -1.6rem; color:#333333;">이런 사이트는 링크를 단축할 수 없어요!</p>
+    </div>
+    <script href="./assets/js/index.js"></script>
 </body>
 </html>

@@ -63,14 +63,16 @@ body {
         position: absolute;
         width:10vw;
         height:50px;
-        margin-left:537px;
+        margin-left:100vw;
         top:0;
     }
 
     .logo {
-        position:absolute;
-        top:75px;
-        left:10vw;
+        position:relative;
+        margin-inline:42.5vw;
+        margin-top: 5vh;
+        width: 15vw;
+        height: 15vw;
     }
 
     h1 {
@@ -88,8 +90,8 @@ body {
         left: 428px;
         margin-left: 10vw;
         top: 527px;
-        width: 16px;
-        height: 20px;
+        width: 1rem;
+        height: 1.125rem;
         stroke: #ffffff;
     }
 
@@ -101,28 +103,28 @@ body {
         border: 0em;
         text-indent: 1em;
         font-weight: 500;
-        width: 475px;
-        margin-left: 10vw;
-        margin-right: 10vw;
-        height: 75px;
-        top: 500px;
-        font-size: 1.75em;
+        width: 90vw;
+        margin-inline: 5vw;
+        height: 4rem;
+        margin-top: 2vh;
+        font-size: 1.5em;
     }
     
     .title {
-        left: 10vw;
-        top: 270px;
-        font-size: 3em;
+        position: relative;
+        margin-inline: 5vw;
+        margin-top: 10vh;
+        font-size: 7.5vw;
     }
 
     .inputsmall {
         position: absolute;
-        width: 475px;
-        height: 50px;
-        top: 590px;
-        left: 10vw;
+        width: 90vw;
+        height: 3rem;
+        margin-top: 5.75rem;
+        margin-inline: 5vw;
         font-size: 1.25em;
-        text-indent: 6em;
+        text-indent: 7rem;
         text-align: left;
         background: #FFFFFF;
         border-radius: 1.25em;
@@ -131,7 +133,7 @@ body {
         color: #333333;
     }
     .inputsmall::placeholder {
-        text-indent: 6em;
+        text-indent: 110px;
         text-align: left;
         font-weight: 500;
         color:#cdcdcd
@@ -139,11 +141,11 @@ body {
 
     .arrow {
         position: absolute;
-        width: 12px;
-        height: 16px;
-        margin-left: 10vw;
-        left: 27px;
-        top: 607px;
+        width: 0.75rem;
+        height: 1rem;
+        margin-left: 5vw;
+        left: 1.5rem;
+        margin-top: 6.75rem;
         z-index: 1;
     }
     
@@ -151,9 +153,9 @@ body {
         position: absolute;
         width: 7px;
         height: 12px;
-        margin-left: 10vw;
-        left: 55px;
-        top: 603px;
+        margin-left:5vw;
+        left: 2.9rem;
+        margin-top: 6.5rem;
         font-weight: 500;
         font-size: 1.25em;
         z-index: 1; 
@@ -161,48 +163,45 @@ body {
     }
 
     .submit {
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        margin-left: 10vw;
-        top: 507px;
-        left: 405px;
+        position: relative ;
+        width: 35vw;
+        height: 3rem;
+        margin-inline: 5vw;
+        margin-top: 9.75rem;
     
         background: #297DFC;
         border-radius: 2em;
         border: 0em;
         text-align: center;
-
-        color: #297dfc;
+        color: #ffffff;
         font-size: 1.125em;
         font-weight: 700;
-        letter-spacing: -0.75em;
+        letter-spacing: -0.02em;
     }
 
     .urltext {
-        position: absolute;
-        left: 10vw;
-        top: 460px;
+        position: flex;
+        margin-inline: 5vw;
+        margin-top: 3vh;
     
         font-weight: 600;
-        font-size: 1.375em;
+        font-size: 4vw;
         letter-spacing: -0.02em;
         text-align: left;
         color: #333333;
     }
 
     .infodiv {
-        margin-left:10vw;
-        margin-top:750px;
+        position: relative;
+        margin-inline: 5vw;
+        margin-top: 10vh;
     }
 
     .github {
-        position: absolute;
-        width: 40px;
-        height:40px;
-        top:740px;
-        margin-left: 10vw;
-        left:435px;
+        width: 2em;
+        margin-top: -2.5rem;
+        margin-right: 5vw;
+        float: right;
     }
 }
 
