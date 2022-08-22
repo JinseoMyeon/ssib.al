@@ -219,17 +219,17 @@ body {
         color: #333333;
     }
 
-    .infodiv {
-        position: relative;
-        margin-inline: 5vw;
-        margin-top: 10vh;
-    }
-
     .github {
         width: 2em;
         margin-top: -2.5rem;
         margin-right: 5vw;
         float: right;
+    }
+
+    .infodiv {
+        position: relative;
+        margin-inline: 5vw;
+        margin-top: 10vh;
     }
 }
 
