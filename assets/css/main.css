@@ -33,6 +33,18 @@ body {
     white-space: nowrap;
 }
 
+.m-05 {
+    margin-top : 0.5vh;
+}
+
+.m-1 {
+    margin-top : 1vh;
+}
+
+.m-2 {
+    margin-top : 2vh;
+}
+
 @media screen and (max-width: 767px) {
     body {
         position:absolute;
@@ -219,6 +231,13 @@ h1 {
     letter-spacing: -0.02em;
 
     color: #333333;
+}
+
+.paragraph {
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #333333;    
 }
 
 .input {
