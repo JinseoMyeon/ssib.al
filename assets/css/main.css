@@ -50,6 +50,22 @@ body {
         position:absolute;
     }
 
+    .paragraph {
+        font-size: 0.625rem;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: #333333;    
+    }
+    
+    .p-small {
+        font-size: 0.625rem;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
     .success {
         position: absolute;
         font-size: 1.25em;
@@ -240,6 +256,10 @@ h1 {
     color: #333333;    
 }
 
+.p-small {
+    font-size: 0.75rem;
+}
+
 .input {
     position: absolute;
     background: #FFFFFF;
@@ -254,6 +274,11 @@ h1 {
     height: 60px;
     top: 555px;
     font-size: 1.25em;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
 }
 
 .inputsmall {
@@ -362,7 +387,7 @@ h1 {
     position: absolute;
     width: 40px;
     height:40px;
-    top:810px;
+    margin-top:790px;
     right: 15vw;
 }
 
