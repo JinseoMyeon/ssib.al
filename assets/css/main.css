@@ -342,11 +342,6 @@ h1 {
     left:15vw;
 }
 
-.warrow {
-    opacity: 0;
-    z-index: 2;
-}
-
 .shorten {
     position: absolute;
     font-size: 1.125rem;
@@ -365,10 +360,6 @@ h1 {
     top: 682px;
     margin-left: 15vw;
     left: 165px;
-}
-
-.submitarrow {
-    opacity: 0;
 }
 
 .urltext {
