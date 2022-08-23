@@ -130,7 +130,7 @@ body {
         border-radius: 1.25em;
         border: 0em;
         text-indent: 1em;
-        font-weight: 500;
+        font-weight: 400;
         width: 90vw;
         margin-inline: 5vw;
         height: 4rem;
@@ -156,7 +156,7 @@ body {
         text-align: left;
         background: #FFFFFF;
         border-radius: 1.25em;
-        font-weight: 500;
+        font-weight: 400;
         border: 0px;
         color: #333333;
     }
