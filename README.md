@@ -8,4 +8,6 @@
 <a href="https://ssib.al">**여기**</a>로 접속하셔서 단축할 링크(https://this_is_long_url.testurl)를 입력하신 후 아래 작은 칸에 단축된 이후 사용할 링크의 이름을 적어주시면 됩니다.<br>적지 않으면 랜덤으로 링크가 생성되지만 후술할 이유로 인해 현재는 랜덤한 링크를 생성해도 사용할 수 없는 상태입니다. 링크를 단축하신 후에는 "ssib.al/커스텀_링크"의 형식으로 접속하시면 됩니다.
 
 ### Trivia -
-추후 링크 단축 시스템을 php에서 JavaScript로 옮길 예정에 있습니다. 언제 할 지는 잘 모르겠지만....<br>링크 단축 소스코드는 https://github.com/urls/url-shortener-php 에서 가져와 이것저것 수정을 거쳤습니다.
+추후 링크 단축 시스템을 php에서 JavaScript로 옮길 예정에 있습니다. 언제 할 지는 잘 모르겠지만....
+
+URL Shortener Source code from https://github.com/urls/url-shortener-php (Some of code had changed for this site.)
