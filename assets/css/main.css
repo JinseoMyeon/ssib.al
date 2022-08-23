@@ -56,6 +56,28 @@ body {
         letter-spacing: -0.02em;
         color: #333333;    
     }
+
+    .shorten {
+        position: absolute;
+        font-size: 4vw;
+        font-weight: 400;
+        color: #333333;
+        margin-top: 5vh;
+        top: 7.5vw;
+        margin-left: 30vw;
+        z-index: 5;
+    }
+    
+    .shortenlink {
+        position: absolute;
+        font-size: 5vw;
+        font-weight: 700;
+        color: #297DFC;
+        margin-top: 5vh;
+        top: 1.5vw;
+        margin-left: 30vw;
+        z-index: 5;
+    }
     
     .p-small {
         font-size: 0.625rem;
@@ -97,7 +119,7 @@ body {
 
     .logo {
         position:relative;
-        margin-inline:42.5vw;
+        margin-left: 7.5vw;
         margin-top: 5vh;
         width: 15vw;
         height: 15vw;
@@ -112,17 +134,6 @@ body {
         color: #333333;
     }
 
-    .warrow {
-        z-index: 1;
-        position: absolute;
-        left: 428px;
-        margin-left: 10vw;
-        top: 527px;
-        width: 1rem;
-        height: 1.125rem;
-        stroke: #ffffff;
-    }
-
     .input {
         position: absolute;
         background: #FFFFFF;
@@ -131,8 +142,8 @@ body {
         border: 0em;
         text-indent: 1em;
         font-weight: 400;
-        width: 90vw;
-        margin-inline: 5vw;
+        width: 85vw;
+        margin-inline: 7.5vw;
         height: 4rem;
         margin-top: 2vh;
         font-size: 1.5em;
@@ -140,19 +151,19 @@ body {
     
     .title {
         position: relative;
-        margin-inline: 5vw;
+        margin-inline: 7.5vw;
         margin-top: 10vh;
         font-size: 7.5vw;
     }
 
     .inputsmall {
         position: absolute;
-        width: 90vw;
+        width: 85vw;
         height: 3rem;
         margin-top: 5.75rem;
-        margin-inline: 5vw;
+        margin-inline: 7.5vw;
         font-size: 1.25em;
-        text-indent: 7rem;
+        text-indent: 102px;
         text-align: left;
         background: #FFFFFF;
         border-radius: 1.25em;
@@ -161,9 +172,9 @@ body {
         color: #333333;
     }
     .inputsmall::placeholder {
-        text-indent: 110px;
+        text-indent: 102px;
         text-align: left;
-        font-weight: 500;
+        font-weight: 400;
         color:#cdcdcd
     }
 
@@ -171,7 +182,7 @@ body {
         position: absolute;
         width: 0.75rem;
         height: 1rem;
-        margin-left: 5vw;
+        margin-left: 6vw;
         left: 1.5rem;
         margin-top: 6.75rem;
         z-index: 1;
@@ -184,7 +195,7 @@ body {
         margin-left:5vw;
         left: 2.9rem;
         margin-top: 6.5rem;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 1.25em;
         z-index: 1; 
         color:#cdcdcd 
@@ -194,7 +205,7 @@ body {
         position: relative ;
         width: 35vw;
         height: 3rem;
-        margin-inline: 5vw;
+        margin-inline: 7.5vw;
         margin-top: 9.75rem;
     
         background: #297DFC;
@@ -209,7 +220,7 @@ body {
 
     .urltext {
         position: flex;
-        margin-inline: 5vw;
+        margin-inline: 7.5vw;
         margin-top: 3vh;
     
         font-weight: 600;
@@ -220,15 +231,15 @@ body {
     }
 
     .github {
+        position: absolute;
         width: 2em;
         margin-top: -2.5rem;
-        margin-right: 5vw;
-        float: right;
+        margin-left: 47.5vw;
     }
 
     .infodiv {
         position: relative;
-        margin-inline: 5vw;
+        margin-inline: 7.5vw;
         margin-top: 10vh;
     }
 }
@@ -355,6 +366,26 @@ h1 {
 .warrow {
     opacity: 0;
     z-index: 2;
+}
+
+.shorten {
+    position: absolute;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #333333;
+    top: 706px;
+    margin-left: 15vw;
+    left: 165px;
+}
+
+.shortenlink {
+    position: absolute;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #297DFC;
+    top: 682px;
+    margin-left: 15vw;
+    left: 165px;
 }
 
 .submitarrow {
