@@ -25,17 +25,17 @@
         unset($_SESSION['success']);
     }
     if (isset($_SESSION['error'])) {
-        echo "<p class='alert'>" . $_SESSION['error'] . "</p>";
+        echo "<p>" . $_SESSION['error'] . "</p>";
         unset($_SESSION['error']);
     }
     if (isset($_GET['error']) && $_GET['error'] == 'db') {
-        echo "<p class='alert'>데이터베이스에 연결하는 데 실패했습니다.</p>";
+        echo "<p class='shortenlink ignore' style='color:#fe5151;'>오류가 발생했습니다.</p><p class='shorten ignore'>데이터베이스에 연결하는 데 실패했습니다.</p>";
     }
     if (isset($_GET['error']) && $_GET['error'] == 'inurl') {
-        echo "<p class='alert'>잘못된 URL로 접근하셨습니다.</p>";
+        echo "<p class='shortenlink ignore' style='color:#fe5151;'>오류가 발생했습니다.</p><p class='shorten ignore'>잘못된 URL로 접근하셨습니다.</p>";
     }
     if (isset($_GET['error']) && $_GET['error'] == 'dnp') {
-        echo "<p class='alert'>오류가 발생했습니다.</p>";
+        echo "<p class='shortenlink ignore' style='color:#fe5151;'>오류가 발생했습니다.</p><p class='shorten ignore'>사이트를 여는 도중 오류가 발생했습니다.</p>";
     }
     ?>
     <form method="POST" action="functions/shorten.php">
