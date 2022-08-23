@@ -163,7 +163,7 @@ body {
         margin-top: 5.75rem;
         margin-inline: 7.5vw;
         font-size: 1.25em;
-        text-indent: 102px;
+        text-indent: 109px;
         text-align: left;
         background: #FFFFFF;
         border-radius: 1.25em;
@@ -172,7 +172,7 @@ body {
         color: #333333;
     }
     .inputsmall::placeholder {
-        text-indent: 102px;
+        text-indent: 109px;
         text-align: left;
         font-weight: 400;
         color:#cdcdcd
@@ -182,7 +182,7 @@ body {
         position: absolute;
         width: 0.75rem;
         height: 1rem;
-        margin-left: 6vw;
+        margin-left: 7.5vw;
         left: 1.5rem;
         margin-top: 6.75rem;
         z-index: 1;
@@ -192,7 +192,7 @@ body {
         position: absolute;
         width: 7px;
         height: 12px;
-        margin-left:5vw;
+        margin-left:7.5vw;
         left: 2.9rem;
         margin-top: 6.5rem;
         font-weight: 400;
