@@ -8,6 +8,10 @@
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
+.dline {
+    color: #cdcdcd;
+}
+
 .ignore {
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -128,6 +132,11 @@ body {
         font-size: 1.5em;
     }
     
+    .warning {
+        color: #333333;
+        position: relative; margin-left:1.75rem; margin-top: -1.5rem;
+    }
+
     .title {
         position: relative;
         margin-inline: 7.5vw;
@@ -215,6 +224,7 @@ body {
         margin-top: -2.5rem;
         margin-left: 47.5vw;
     }
+    
 
     .infodiv {
         position: relative;
@@ -237,6 +247,11 @@ h1 {
     letter-spacing: -0.02em;
 
     color: #333333;
+}
+
+.warning {
+    color: #333333;
+    position: relative; margin-left:2rem; margin-top: -1.6rem;
 }
 
 .paragraph {
@@ -391,4 +406,67 @@ h1 {
     margin-top:790px;
     right: 15vw;
 }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: #333333;
+        color: #f1f1f1;
+    }
+
+    .urltext {
+        color: #f1f1f1
+    }
+
+    .shorten {
+        color: #f1f1f1;
+    }
+
+
+
+    .input {
+        background: #444444;
+        color: #f1f1f1;
+    }
+
+    .ssibal {
+        color: #808080;
+    }
+
+    .inputsmall {
+        background: #444444;
+        color: #f1f1f1;
+    }
+
+    .inputsmall::placeholder {
+        color: #808080;
+    }
+
+    .arrow {
+        stroke: #f1f1f1;
+    }
+
+    .title {
+        color: #f1f1f1;
+    }
+
+    .github {
+        fill: #f1f1f1;
+    }
+
+    h1 {
+        color: #f1f1f1;
+    }
+
+    .paragraph {
+        color: #f1f1f1;
+    }
+
+    .dline {
+        color: #808080;
+    }
+
+    .warning {
+        color: #f1f1f1;
+    }
 }
