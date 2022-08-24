@@ -62,7 +62,7 @@
     </a>
     <div class="infodiv">
         <img src="./assets/images/warning.svg" class="ignore icon">
-        <p class="bold msg ignore warning">이런 사이트는 링크를 단축할 수 없어요.</p>
+        <p class="bold ignore warning">이런 사이트는 링크를 단축할 수 없어요.</p>
         <p class="ignore paragraph m-2">대한민국 법률 상 <strong>불법, 유해 사이트</strong>로 지정된 사이트</p>
         <p class="ignore paragraph m-1">해킹, 스미싱 등 <strong>불법적인 용도</strong>로 사용하는 사이트</p>
         <p class="ignore paragraph m-1"><strong>상업적인 용도</strong>로 사용하는 사이트</p>
