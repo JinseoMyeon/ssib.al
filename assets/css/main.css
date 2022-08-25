@@ -223,6 +223,7 @@ body {
     .github {
         position: absolute;
         width: 2em;
+        height: auto;
         margin-top: -2.5rem;
         margin-left: 47.5vw;
     }
