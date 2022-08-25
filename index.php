@@ -13,6 +13,7 @@
     <meta name="color-scheme" content="dark light" />
     <title>씨발 | 링크 단축 서비스</title>
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
 </head>
 <body>
     <svg id="toggleTheme" class="ignore logo" width="71" height="80" viewBox="0 0 71 80" fill="none" xmlns="http://www.w3.org/2000/svg">
