@@ -224,16 +224,24 @@ body {
         position: absolute;
         width: 2em;
         height: auto;
+    }
+
+    .githubdiv {
+        position: absolute;
         margin-top: -2.5rem;
         margin-left: 47.5vw;
+        width: 2em;
+        height: 2em;
+        cursor: pointer;
+        z-index: 5;
     }
-    
 
     .infodiv {
         position: relative;
         margin-inline: 7.5vw;
         margin-top: 10vh;
     }
+    
 }
 
 @media screen and (min-width: 768px) {
@@ -412,9 +420,18 @@ h1 {
     position: absolute;
     width: 40px;
     height:40px;
+}
+
+.githubdiv {
+    position: absolute;
     margin-top:790px;
     right: 15vw;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 5;
 }
+
 }
 
     html.dark body {
