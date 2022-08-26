@@ -76,8 +76,18 @@ class UrlShortener {
     public function returnCustomCode($orignalURL, $customUniqueCode) {
         $orignalURL       = trim($orignalURL);
         $customUniqueCode = trim($customUniqueCode);
+
+        if(strpos(strtolower($orignalURL), "https://ssib.al/") !== false) {
+            header("Location: ../index.php?error=recursion");
+            die();
+        }
+
+        else if(strpos(strtolower($orignalURL), "http://ssib.al/") !== false) {
+            header("Location: ../index.php?error=recursion");
+            die();
+        }
         
-        if (filter_var($orignalURL, FILTER_VALIDATE_URL)) {
+        else if (filter_var($orignalURL, FILTER_VALIDATE_URL)) {
             $insert = $this->db->query("INSERT INTO link (url,code,created) VALUES ('{$orignalURL}','{$customUniqueCode}',NOW())");
             
             return true;

@@ -47,6 +47,9 @@
     if (isset($_GET['error']) && $_GET['error'] == 'dnp') {
         echo "<p class='shortenlink ignore' style='color:#fe5151;'>오류가 발생했습니다.</p><p class='shorten ignore'>사이트를 여는 도중 오류가 발생했습니다.</p>";
     }
+    if (isset($_GET['error']) && $_GET['error'] == 'recursion') {
+        echo "<p class='shortenlink ignore' style='color:#fe5151;'>단축할 수 없는 링크입니다.</p><p class='shorten ignore'>재귀함수를 여기서 구현하시려는 건 아니죠?</p>";
+    }
     ?>
     <form method="POST" action="functions/shorten.php">
         <div>
