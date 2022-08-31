@@ -23,9 +23,19 @@ class UrlShortener {
      */
     
     public function generateUniqueCode($idOfRow) {
-        $idOfRow = string(rand(46656,2147483647));
         //$idOfRow += 10000000;
-        return base_convert($idOfRow, 10, 36);
+        $conn = mysqli_connect(HOST_NAME, USER_NAME, USER_PASSWORD, DB_NAME);
+        $idOfRow = rand(46656,2147483647);
+        $idOfRow = base_convert($idOfRow, 10, 36);
+        $sql= "SELECT * FROM link where code ='{$idOfRow}'";
+        $result = mysqli_fetch_array(mysqli_query($this->db, $sql));
+        while($result) {
+            $idOfRow = rand(46656,2147483647);
+            $idOfRow = base_convert($idOfRow, 10, 36);
+            $sql= "SELECT * FROM link where code ='{$idOfRow}'";
+            $result = mysqli_fetch_array(mysqli_query($this->db, $sql));
+        }
+        return $idOfRow;
     }
     
     /**
