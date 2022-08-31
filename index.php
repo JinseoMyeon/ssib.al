@@ -9,14 +9,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="url shortener">
-    <meta name="color-scheme" content="dark light" />
-    <meta name="naver-site-verification" content="b8c6d6c2cd25f58f7714a81dc07a2ff625124832" />
-    <meta name="msvalidate.01" content="6E57E9298518AF4483787369C99AA184" />
+    <meta name="author" content="JinseoMyeon">
     <meta name="description" content="한 번 들으면 잊을 수 없는 링크 단축 서비스.">
     <meta property="og:title" content="씨발 | 링크 단축 서비스">
     <meta property="og:description" content="한 번 들으면 잊을 수 없는 링크 단축 서비스.">
     <title>씨발 | 링크 단축 서비스</title>
+    <meta name="color-scheme" content="dark light" />
+    <meta name="naver-site-verification" content="b8c6d6c2cd25f58f7714a81dc07a2ff625124832" />
+    <meta name="msvalidate.01" content="6E57E9298518AF4483787369C99AA184" />
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="icon" href="./assets/images/favicon.ico">
 </head>

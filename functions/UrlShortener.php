@@ -23,7 +23,8 @@ class UrlShortener {
      */
     
     public function generateUniqueCode($idOfRow) {
-        $idOfRow += 10000000;
+        $idOfRow = string(rand(42876,2147483647));
+        //$idOfRow += 10000000;
         return base_convert($idOfRow, 10, 36);
     }
     
