@@ -103,6 +103,13 @@ class UrlShortener {
             header("Location: ../index.php?error=recursion");
             die();
         }
+
+        // 접속 요청을 보내는 코드 완성 이전까지 임시 사용.
+        else if (strpos(strtolower($orignalURL), "https://https://") !== false || strpos(strtolower($orignalURL), "https://http://") !== false) {
+            header("Location: ../index.php?error=inurl");
+            die();
+        }
+        // 
         
         else if (filter_var($orignalURL, FILTER_VALIDATE_URL)) {
             $insert = $this->db->query("INSERT INTO link (url,code,created) VALUES ('{$orignalURL}','{$customUniqueCode}',NOW())");
