@@ -26,7 +26,7 @@ class UrlShortener {
         //$idOfRow += 10000000;
         $idOfRow = rand(46656,2147483647);
         $idOfRow = base_convert($idOfRow, 10, 36);
-        $sql= "SELECT * FROM link where code ='{$idOfRow}'";
+        $sql = "SELECT * FROM link where code ='{$idOfRow}'";
         $result = mysqli_fetch_array(mysqli_query($this->db, $sql));
         while($result) {
             $idOfRow = rand(46656,2147483647);
@@ -53,6 +53,13 @@ class UrlShortener {
             header("Location: ../index.php?error=inurl");
             die();
         }
+
+        // 접속 요청을 보내는 코드 완성 이전까지 임시 사용.
+        if (strpos(strtolower($orignalURL), "https://https://") !== false || strpos(strtolower($orignalURL), "https://http://") !== false) {
+            header("Location: ../index.php?error=inurl");
+            die();
+        }
+        // 
         
         else {
             $orignalURL      = $this->db->real_escape_string($orignalURL);
