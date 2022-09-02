@@ -71,7 +71,7 @@ class UrlShortener {
         $orignalURL = trim($orignalURL);
 
         $pingURL = str_replace("https://", "", $orignalURL);
-        $pingURL = strstr($pingURL, '/', true);
+        $pingURL = str_replace("http://", "", $pingURL);
         $pingURL = explode('/',$pingURL);
         $pingResult = pingDomain($pingURL[0]);
         
@@ -145,7 +145,7 @@ class UrlShortener {
         $customUniqueCode = trim($customUniqueCode);
 
         $pingURL = str_replace("https://", "", $orignalURL);
-        $pingURL = strstr($pingURL, '/', true);
+        $pingURL = str_replace("http://", "", $pingURL);
         $pingURL = explode('/',$pingURL);
         $pingResult = pingDomain($pingURL[0]);
 
