@@ -74,6 +74,8 @@ class UrlShortener {
         $pingURL = str_replace("http://", "", $pingURL);
         $pingURL = explode('/',$pingURL);
         $pingResult = pingDomain($pingURL[0]);
+
+
         
         if (!filter_var($orignalURL, FILTER_VALIDATE_URL)) {
             header("Location: ../index.php?error=inurl");
