@@ -67,13 +67,16 @@ class UrlShortener {
     
     public function validateUrlAndReturnCode($orignalURL) {
         $orignalURL = trim($orignalURL);
+
+        $pingURL = str_replace("https://", "", $orignalURL);
+        $pingURL = strstr($pingURL, '/', true);
         
         if (!filter_var($orignalURL, FILTER_VALIDATE_URL)) {
             header("Location: ../index.php?error=inurl");
             die();
         }
 
-        else if (pingDomain($orignalURL) == -1) {
+        else if (pingDomain($pingURL) == -1) {
             header("Location: ../index.php?error=inurl");
             die();
         }
@@ -118,6 +121,9 @@ class UrlShortener {
         $orignalURL       = trim($orignalURL);
         $customUniqueCode = trim($customUniqueCode);
 
+        $pingURL = str_replace("https://", "", $orignalURL);
+        $pingURL = strstr($pingURL, '/', true);
+
         if(strpos(strtolower($orignalURL), "https://ssib.al/") !== false) {
             header("Location: ../index.php?error=recursion");
             die();
@@ -128,7 +134,7 @@ class UrlShortener {
             die();
         }
 
-        else if (pingDomain($orignalURL) == -1) {
+        else if (pingDomain($pingURL) == -1) {
             header("Location: ../index.php?error=inurl");
             die();
         }
