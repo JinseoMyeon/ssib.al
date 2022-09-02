@@ -3,24 +3,6 @@
 require_once("../config.php");
 
 class UrlShortener {
-    public function pingDomain($domain) {
-        $starttime = microtime(true);
-        $file      = fsockopen ($domain, 80, $errno, $errstr, 10);
-        $stoptime  = microtime(true);
-        $status    = 0;
-    
-        if(!$file)
-        {
-            $status = -1;
-        }
-        else
-        {
-            fclose($file);
-            $status = ($stoptime - $starttime) * 1000;
-            $status = floor($status);
-        }
-        return $status;
-    }
 
     protected $db;
     
@@ -66,17 +48,39 @@ class UrlShortener {
      */
     
     public function validateUrlAndReturnCode($orignalURL) {
+
+        function pingDomain($domain) {
+            $starttime = microtime(true);
+            $file      = fsockopen ($domain, 80, $errno, $errstr, 10);
+            $stoptime  = microtime(true);
+            $status    = 0;
+        
+            if(!$file)
+            {
+                $status = -1;
+            }
+            else
+            {
+                fclose($file);
+                $status = ($stoptime - $starttime) * 1000;
+                $status = floor($status);
+            }
+            return $status;
+        }
+
         $orignalURL = trim($orignalURL);
 
         $pingURL = str_replace("https://", "", $orignalURL);
         $pingURL = strstr($pingURL, '/', true);
+        $pingURL = explode('/',$pingURL);
+        $pingResult = pingDomain($pingURL[0]);
         
         if (!filter_var($orignalURL, FILTER_VALIDATE_URL)) {
             header("Location: ../index.php?error=inurl");
             die();
         }
 
-        else if (pingDomain($pingURL) == -1) {
+        else if ($pingResult == -1) {
             header("Location: ../index.php?error=inurl");
             die();
         }
@@ -118,11 +122,32 @@ class UrlShortener {
      */
     
     public function returnCustomCode($orignalURL, $customUniqueCode) {
+        function pingDomain($domain) {
+            $starttime = microtime(true);
+            $file      = fsockopen ($domain, 80, $errno, $errstr, 10);
+            $stoptime  = microtime(true);
+            $status    = 0;
+        
+            if(!$file)
+            {
+                $status = -1;
+            }
+            else
+            {
+                fclose($file);
+                $status = ($stoptime - $starttime) * 1000;
+                $status = floor($status);
+            }
+            return $status;
+        }
+
         $orignalURL       = trim($orignalURL);
         $customUniqueCode = trim($customUniqueCode);
 
         $pingURL = str_replace("https://", "", $orignalURL);
         $pingURL = strstr($pingURL, '/', true);
+        $pingURL = explode('/',$pingURL);
+        $pingResult = pingDomain($pingURL[0]);
 
         if(strpos(strtolower($orignalURL), "https://ssib.al/") !== false) {
             header("Location: ../index.php?error=recursion");
@@ -134,7 +159,7 @@ class UrlShortener {
             die();
         }
 
-        else if (pingDomain($pingURL) == -1) {
+        else if ($pingResult == -1) {
             header("Location: ../index.php?error=inurl");
             die();
         }
