@@ -13,9 +13,9 @@ i@ssib.al:~$ service-info 'https://ssib.al/'
        ~=:.        .;*-  ~*-          |  
                         ~=$*-         |  < Used Languages >
                       ~-$$$$=-        |  
-                    ~$$;.  .!$=~      |  PHP / CSS / JavaScript
-                  ~=$!.      .!$=~    | 
-                 ,!!;          ;!!,  
+                     ~$$;. .!$=~      |  PHP / CSS / JavaScript
+                   ~=$!.     .!$=~    | 
+                  ,!!;         ;!!,  
                                
 ```
 ## 
