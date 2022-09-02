@@ -1,20 +1,20 @@
 ```console
 i@ssib.al:~$ service-info 'https://ssib.al/'
 
-             ╒██µ                  
-             ╞██▌                   |  < Service Info >
-             ╞███▄                  |  
-             ╞█████▌                |  이건 욕이 아니에요.
-             ╞██▌╙███▓, ╓╓          |  This is NOT a swear word.
-            ╓████╖ └▀██ ▒▒[         |  
-          ▄███▀▀███▄    ▒▒[         |  한 번 들으면 잊을 수 없는 링크 단축 서비스
-        ▄███▀    ▀███▄  ▒▒[         |  ssib.al
-       ███▀        ╙███ ▒▒[         |  
-                       ,▒▒╠         |  < Used Languages >
-                     ╓╠▒▒╠▒╠╓       |  
-                   ╓╠▒▒╙  "╠▒▒╦     |  PHP / CSS / JavaScript
-                 ╔╠▒╠"      `╠▒▒╦   | 
-                 `"`           └"  
+             ,!!;                  
+             ~=*-                     |  < Service Info >
+             ~=$*-                    |  
+             ~=$$$*-                  |  이건 욕이 아니에요.
+             -=*,-*$*-   ,;,          |  This is NOT a swear word.
+           .;$$$=:   *$  ~*-          |  
+          .;$$;.,!$$:    ~*-          |  한 번 들으면 잊을 수 없는 링크 단축 서비스
+        :$$;.    .!$=~   ~*-          |  ssib.al
+       ~=:.        .;*-  ~*-          |  
+                        ~=$*-         |  < Used Languages >
+                      ~-$$$$=-        |  
+                    ~$$;.  .!$=~      |  PHP / CSS / JavaScript
+                  ~=$!.      .!$=~    | 
+                 ,!!;          ;!!,  
 ```
 ## 
 ### About This Service -
