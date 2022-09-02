@@ -3,6 +3,25 @@
 require_once("../config.php");
 
 class UrlShortener {
+    public function pingDomain($domain) {
+        $starttime = microtime(true);
+        $file      = fsockopen ($domain, 80, $errno, $errstr, 10);
+        $stoptime  = microtime(true);
+        $status    = 0;
+    
+        if(!$file)
+        {
+            $status = -1;
+        }
+        else
+        {
+            fclose($file);
+            $status = ($stoptime - $starttime) * 1000;
+            $status = floor($status);
+        }
+        return $status;
+    }
+
     protected $db;
     
     public function __construct() {
@@ -54,12 +73,17 @@ class UrlShortener {
             die();
         }
 
-        // 접속 요청을 보내는 코드 완성 이전까지 임시 사용.
+        else if (pingDomain($orignalURL) == -1) {
+            header("Location: ../index.php?error=inurl");
+            die();
+        }
+
+        /* 접속 요청을 보내는 코드 완성 이전까지 임시 사용.
         if (strpos(strtolower($orignalURL), "https://https://") !== false || strpos(strtolower($orignalURL), "https://http://") !== false) {
             header("Location: ../index.php?error=inurl");
             die();
         }
-        // 
+        */ 
         
         else {
             $orignalURL      = $this->db->real_escape_string($orignalURL);
@@ -104,12 +128,17 @@ class UrlShortener {
             die();
         }
 
-        // 접속 요청을 보내는 코드 완성 이전까지 임시 사용.
+        else if (pingDomain($orignalURL) == -1) {
+            header("Location: ../index.php?error=inurl");
+            die();
+        }
+
+        /* 접속 요청을 보내는 코드 완성 이전까지 임시 사용.
         else if (strpos(strtolower($orignalURL), "https://https://") !== false || strpos(strtolower($orignalURL), "https://http://") !== false) {
             header("Location: ../index.php?error=inurl");
             die();
         }
-        // 
+        */ 
         
         else if (filter_var($orignalURL, FILTER_VALIDATE_URL)) {
             $insert = $this->db->query("INSERT INTO link (url,code,created) VALUES ('{$orignalURL}','{$customUniqueCode}',NOW())");
