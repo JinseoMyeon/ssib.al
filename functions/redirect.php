@@ -6,15 +6,13 @@ require_once("../config.php");
 $urlShortener = new UrlShortener();
 
 if (isset($_GET['secret'])) {
-    $conns = mysqli_connect(HOST_NAME, USER_NAME, USER_PASSWORD, DB_NAME);
+    $database = new mysqli(HOST_NAME, USER_NAME, USER_PASSWORD, DB_NAME);
     $uniqueCode = $_GET['secret'];
     $orignalUrl = $urlShortener->getOrignalURL($uniqueCode);
-    $dbQuery = $this->db->query("SELECT * FROM link WHERE code = '{$uniqueCode}'");
-    $getResult = mysqli_query($conns, $dbQuery);
-    $getResult = mysqli_fetch_array($getResult);
-    $getCount = $getResult['used_count'] + 1;
-    $updateInDatabase = $this->db->query("UPDATE link SET used_count = '{$getCount}' WHERE code = '{$uniqueCode}'");
-    $updateInDatabase = $this->db->query("UPDATE link SET last_used = NOW() WHERE code = '{$uniqueCode}'");
+    $rows = $database->query("SELECT used_count FROM link WHERE code = '{$uniqueCode}'");
+    $getCount = $rows->fetch_object();
+    $count = int($rows->fetch_object()) + 1;
+    $updateInDatabase = $database->query("UPDATE link SET used_count = '{$count}' WHERE code = '{$uniqueCode}'");
     header("Location: {$orignalUrl}");
     die();
 }
