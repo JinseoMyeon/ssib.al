@@ -12,7 +12,7 @@ if (isset($_GET['secret'])) {
     $dbQuery = $this->db->query("SELECT * FROM link WHERE code = '{$uniqueCode}'");
     $getResult = mysqli_query($conns, $dbQuery);
     $getResult = mysqli_fetch_array($getResult);
-    $getCount = $row['used_count'] + 1;
+    $getCount = $getResult['used_count'] + 1;
     $updateInDatabase = $this->db->query("UPDATE link SET used_count = '{$getCount}' WHERE code = '{$uniqueCode}'");
     $updateInDatabase = $this->db->query("UPDATE link SET last_used = NOW() WHERE code = '{$uniqueCode}'");
     header("Location: {$orignalUrl}");
