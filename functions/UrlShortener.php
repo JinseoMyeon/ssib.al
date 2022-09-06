@@ -95,7 +95,8 @@ class UrlShortener {
         */ 
 
         else if ($getFilter->num_rows == 0) {
-            header("Location :../index.php?error=filter");
+            header("Location: ../index.php?error=filter");
+            die;
         }
 
         else {
