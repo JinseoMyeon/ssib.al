@@ -93,8 +93,12 @@ class UrlShortener {
             die();
         }
         */ 
-        
-        else if(!$getFilter) {
+
+        else if ($getFilter->num_rows == 0) {
+            header("Location :../index.php?error=filter");
+        }
+
+        else {
             $orignalURL      = $this->db->real_escape_string($orignalURL);
             $existInDatabase = $this->db->query("SELECT * FROM link WHERE url ='{$orignalURL}'");
             
@@ -111,11 +115,6 @@ class UrlShortener {
             $updateInDatabase  = $this->db->query("UPDATE link SET code = '{$uniqueCode}' WHERE url = '{$orignalURL}'");
             
             return $uniqueCode;
-        }
-        
-        else {
-            header("Location: ../index.php?error=filter");
-            die();
         }
     }
     
@@ -156,7 +155,7 @@ class UrlShortener {
         $pingURL = explode('/',$pingURL);
         $pingResult = pingDomain($pingURL[0]);
 
-        $getFilter  = $this->db->query("SELECT * FROM link-censored WHERE url LIKE '%{$orignalURL}%'");
+        $getFilter  = $this->db->query("SELECT * FROM link_censored WHERE url LIKE '%{$orignalURL}%'");
 
         if(strpos(strtolower($orignalURL), "https://ssib.al/") !== false) {
             header("Location: ../index.php?error=recursion");
