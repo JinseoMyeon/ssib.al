@@ -75,8 +75,8 @@ class UrlShortener {
         $pingURL = explode('/',$pingURL);
         $pingResult = pingDomain($pingURL[0]);
 
+        $getFilter  = $this->db->query("SELECT * FROM link-censored WHERE url LIKE '%{$orignalURL}%'");
 
-        
         if (!filter_var($orignalURL, FILTER_VALIDATE_URL)) {
             header("Location: ../index.php?error=inurl");
             die();
@@ -94,7 +94,7 @@ class UrlShortener {
         }
         */ 
         
-        else {
+        else if(!$getFilter) {
             $orignalURL      = $this->db->real_escape_string($orignalURL);
             $existInDatabase = $this->db->query("SELECT * FROM link WHERE url ='{$orignalURL}'");
             
@@ -111,6 +111,11 @@ class UrlShortener {
             $updateInDatabase  = $this->db->query("UPDATE link SET code = '{$uniqueCode}' WHERE url = '{$orignalURL}'");
             
             return $uniqueCode;
+        }
+        
+        else {
+            header("Location: ../index.php?error=filter");
+            die();
         }
     }
     
@@ -150,6 +155,8 @@ class UrlShortener {
         $pingURL = str_replace("http://", "", $pingURL);
         $pingURL = explode('/',$pingURL);
         $pingResult = pingDomain($pingURL[0]);
+
+        $getFilter  = $this->db->query("SELECT * FROM link-censored WHERE url LIKE '%{$orignalURL}%'");
 
         if(strpos(strtolower($orignalURL), "https://ssib.al/") !== false) {
             header("Location: ../index.php?error=recursion");
