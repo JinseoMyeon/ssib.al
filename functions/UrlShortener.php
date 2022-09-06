@@ -75,7 +75,7 @@ class UrlShortener {
         $pingURL = explode('/',$pingURL);
         $pingResult = pingDomain($pingURL[0]);
 
-        $getFilter  = $this->db->query("SELECT * FROM link-censored WHERE url LIKE '%{$orignalURL}%'");
+        $getFilter  = $this->db->query("SELECT * FROM link_censored WHERE url LIKE '%{$orignalURL}%'");
 
         if (!filter_var($orignalURL, FILTER_VALIDATE_URL)) {
             header("Location: ../index.php?error=inurl");
@@ -94,7 +94,7 @@ class UrlShortener {
         }
         */ 
 
-        else if ($getFilter->num_rows == 0) {
+        else if ($getFilter->num_rows > 0) {
             header("Location: ../index.php?error=filter");
             die;
         }
