@@ -70,6 +70,12 @@ class UrlShortener {
 
         $orignalURL = trim($orignalURL);
 
+        if ($getFilter->num_rows > 0) {
+            header("Location: ../index.php?error=filter");
+            $updateInDatabase = $this->db->query("UPDATE link_censored SET counts = counts + 1 WHERE url LIKE '%$pingURL[0]%'");
+            die();
+        }
+
         $pingURL = str_replace("https://", "", $orignalURL);
         $pingURL = str_replace("http://", "", $pingURL);
         $pingURL = explode('/',$pingURL);
@@ -93,12 +99,6 @@ class UrlShortener {
             die();
         }
         */ 
-
-        else if ($getFilter->num_rows > 0) {
-            header("Location: ../index.php?error=filter");
-            $updateInDatabase = $this->db->query("UPDATE link_censored SET counts = counts + 1 WHERE url LIKE '%$pingURL[0]%'");
-            die();
-        }
 
         else {
             $orignalURL      = $this->db->real_escape_string($orignalURL);
@@ -152,12 +152,18 @@ class UrlShortener {
         $orignalURL       = trim($orignalURL);
         $customUniqueCode = trim($customUniqueCode);
 
+        $getFilter  = $this->db->query("SELECT * FROM link_censored WHERE url LIKE '%$pingURL[0]%'");
+        
+        if ($getFilter->num_rows > 0) {
+            header("Location: ../index.php?error=filter");
+            $updateInDatabase = $this->db->query("UPDATE link_censored SET counts = counts + 1 WHERE url LIKE '%$pingURL[0]%'");
+            die();
+        }
+
         $pingURL = str_replace("https://", "", $orignalURL);
         $pingURL = str_replace("http://", "", $pingURL);
         $pingURL = explode('/',$pingURL);
         $pingResult = pingDomain($pingURL[0]);
-
-        $getFilter  = $this->db->query("SELECT * FROM link_censored WHERE url LIKE '%$pingURL[0]%'");
 
         if(strpos(strtolower($orignalURL), "https://ssib.al/") !== false) {
             header("Location: ../index.php?error=recursion");
@@ -171,12 +177,6 @@ class UrlShortener {
 
         else if ($pingResult == -1) {
             header("Location: ../index.php?error=inurl");
-            die();
-        }
-
-        else if ($getFilter->num_rows > 0) {
-            header("Location: ../index.php?error=filter");
-            $updateInDatabase = $this->db->query("UPDATE link_censored SET counts = counts + 1 WHERE url LIKE '%$pingURL[0]%'");
             die();
         }
 
