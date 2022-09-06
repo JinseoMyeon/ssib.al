@@ -10,9 +10,7 @@ if (isset($_GET['secret'])) {
     $uniqueCode = $_GET['secret'];
     $getUniqueCode = $uniqueCode;
     $orignalUrl = $urlShortener->getOrignalURL($uniqueCode);
-    $rows = $database->query("SELECT * FROM link WHERE code = '{$getUniqueCode}' AND url = '{$orignalUrl}' LIMIT 1");
-    $count = ($rows->fetch_object()->used_count) + 1;
-    $updateInDatabase = $database->query("UPDATE link SET used_count = '{$count}', last_used = NOW() WHERE code = '{$getUniqueCode}' AND url = '{$orignalUrl}'");
+    $updateInDatabase = $database->query("UPDATE link SET used_count = used_count + 1, last_used = NOW() WHERE code = '{$getUniqueCode}' AND url = '{$orignalUrl}'");
     header("Location: {$orignalUrl}");
     die();
 }
