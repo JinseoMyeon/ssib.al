@@ -1,4 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://unpkg.com/pageable@latest/dist/pageable.min.css');
 
 :root {
     --gray1 : #f2f4f8;
@@ -54,8 +55,33 @@ body {
     user-select: all;
 }
 
+#scrollSection {
+    height: 200vh;
+}
+
+#scrollSection1 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#scrollSection2 {
+    position: absolute;
+    margin-top: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+#wrapper {
+    width: 100vw;
+    height: auto;
+}
+
 @media screen and (min-width: 1025px) { /* for desktop and PC */
     #header {
+        position: fixed;
+        z-index: 1;
         margin-left: 5vw;
         width: 90vw;
         height: 100px;
@@ -63,16 +89,13 @@ body {
 
     #logo {
         position: fixed;
+        z-index: 1;
         margin-top: 50px;
         height: 50px;
     }
-
-    #wrapper {
-        width: 100vw;
-    }
     
     #title {
-        margin-top: 233px;
+        margin-top: 333px;
     }
 
     .title {
@@ -153,25 +176,23 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {  /* for tablet */
     #header {
-        position: relative;
+        position: fixed;
+        z-index: 1;
         margin-left: 5vw;
         width: 90vw;
         height: 100px;
     }
 
     .logo {
-        position: absolute;
-        bottom: 0px;
+        position: fixed;
+        z-index: 1;
+        margin-top: 50px;
         height: 6vw;
         max-height: 50px;
     }
 
-    #wrapper {
-        width: 100vw;
-    }
-
     #title {
-        margin-top: 22.75vw;
+        margin-top: 32.75vw;
     }
 
     .title {
@@ -257,5 +278,113 @@ body {
 }
 
 @media screen and (max-width: 767px) { /* for mobile */
+    #header {
+        position: fixed;
+        z-index: 1;
+        margin-left: 5vw;
+        width: 90vw;
+        height: 13.05vw;
+    }
 
+    .logo {
+        position: fixed;
+        z-index: 1;
+        margin-top: calc(13.05vw - 7vw);
+        height: 7vw;
+        max-height: 46px;
+    }
+
+    #title {
+        margin-top: 40vw;
+    }
+
+    .title {
+        text-align: center;
+        color: var(--gray7);
+        font-size: 9vw;
+    }
+
+    #originalURL {
+        margin-top: 15vw;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #input {
+        width: 90vw;
+        max-width: 800px;
+        height: 13vw;
+        min-height: 40px;
+        max-height: 55px;
+        background-color: white;
+        color: var(--gray7);
+        border-radius: 15px;
+        font-size: 1.125rem;
+        font-weight: 400;
+        text-indent: 20px;
+        border: 1px solid var(--gray2);
+    }
+
+    #shortenURL {
+        margin-top: 2.5vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #uniqueCode {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #submit {
+        margin-top: 2.5vw;
+    }
+
+    #custom {
+        width: 90vw;
+        max-width: 800px;
+        height: 13vw;
+        min-height: 40px;
+        max-height: 55px;
+        background-color: white;
+        color: var(--gray7);
+        border-radius: 15px;
+        font-size: 1.125rem;
+        font-weight: 400;
+        text-indent: 76.5px;
+        border: 1px solid var(--gray2);
+    }
+
+    .submit {
+        margin-left: 5vw;
+        width: 35vw;
+        max-width: 175px;
+        height: 13vw;
+        min-height: 40px;
+        max-height: 55px;
+        background-color: var(--brand6);
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        border-radius: 15px;
+        font-size: 1.25rem;
+        border: 1px solid var(--gray2);
+        cursor : pointer;
+    }
+
+    #uniqueCodePlaceholder {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 13vw;
+        min-height: 40px;
+        max-height: 55px;
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 400;
+        text-indent: 21px;
+        color: var(--gray3);
+    }
 }
