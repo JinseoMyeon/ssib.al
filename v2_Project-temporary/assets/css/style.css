@@ -197,7 +197,25 @@ body {
         border-radius: 20px;
         border: 0px;
         background-color: var(--gray4);
-        
+        cursor : pointer;
+    }
+
+    #warning {
+        position: absolute;
+        left: 20px;
+        top: 18px;
+        width: 19px;
+        height: 19px;
+    }
+
+    #warningText {
+        position: absolute;
+        display: table;
+        top: 17.5px;
+        left: 47px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
     }
 }
 
