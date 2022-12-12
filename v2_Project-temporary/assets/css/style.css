@@ -18,6 +18,11 @@
     --brand6 : #297DFC;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 html {
     scroll-snap-type:y mandatory;
     scrollbar-width: none;
@@ -26,6 +31,10 @@ html {
 
 html::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
+}
+
+strong {
+    font-weight: 500;
 }
 
 * {
@@ -217,6 +226,31 @@ body {
         font-weight: 600;
         color: white;
     }
+
+    #scrollDownIcon {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #bFooter {
+        position: absolute;
+        top: 88vh;
+        left: 5vw;
+        background-color: var(--gray1);
+    }
+
+    .footerText {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: var(--gray3);
+    }
+
+    .footerBoldText {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--gray4);
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {  /* for tablet */
@@ -319,6 +353,38 @@ body {
         font-weight: 400;
         text-indent: 32px;
         color: var(--gray3);
+    }
+
+    #restriction {
+        position: absolute;
+        display: table;
+        margin-top: 152px;
+        top: 63vw;
+        margin-left: 5vw;
+        width: 300px;
+        height: 55px;
+        border-radius: 20px;
+        border: 0px;
+        background-color: var(--gray4);
+        cursor : pointer;
+    }
+
+    #warning {
+        position: absolute;
+        left: 20px;
+        top: 18px;
+        width: 19px;
+        height: 19px;
+    }
+
+    #warningText {
+        position: absolute;
+        display: table;
+        top: 17.5px;
+        left: 47px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
     }
 }
 
