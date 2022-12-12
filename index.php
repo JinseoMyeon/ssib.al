@@ -53,6 +53,9 @@
     if (isset($_GET['error']) && $_GET['error'] == 'filter') {
         echo "<p class='shortenlink ignore' style='color:#fe5151;'>단축할 수 없는 링크입니다.</p><p class='shorten ignore'>단축 금지 사이트로 지정되어 있는 사이트입니다.</p>";
     }
+    if (isset($_GET['error']) && $_GET['error'] == 'incorrect') {
+        echo "<p class='shortenlink ignore' style='color:#fe5151;'>단축할 수 없는 링크입니다.</p><p class='shorten ignore'>부적절한 문자가 포함되어 있습니다.</p>";
+    }
     ?>
     <form method="POST" action="functions/shorten.php">
         <div>
