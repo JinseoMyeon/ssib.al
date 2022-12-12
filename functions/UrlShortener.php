@@ -97,12 +97,6 @@ class UrlShortener {
             die();
         }
 
-        /* 접속 요청을 보내는 코드 완성 이전까지 임시 사용.
-        if (strpos(strtolower($orignalURL), "https://https://") !== false || strpos(strtolower($orignalURL), "https://http://") !== false) {
-            header("Location: ../index.php?error=inurl");
-            die();
-        }
-        */ 
 
         else {
             $orignalURL      = $this->db->real_escape_string($orignalURL);
@@ -189,14 +183,14 @@ class UrlShortener {
             die();
         }
 
-        /* 접속 요청을 보내는 코드 완성 이전까지 임시 사용.
-        else if (strpos(strtolower($orignalURL), "https://https://") !== false || strpos(strtolower($orignalURL), "https://http://") !== false) {
-            header("Location: ../index.php?error=inurl");
+        if (strpos($customUniqueCode, '"') !== false || strpos($customUniqueCode, "'") !== false || strpos($customUniqueCode, "&") !== false || strpos($customUniqueCode,"(") !== false || strpos($customUniqueCode, "=") !== false) {
+            header("Location: ../index.php?error=incorrect");
             die();
         }
-        */ 
         
-        else if (filter_var($orignalURL, FILTER_VALIDATE_URL)) {
+        if (filter_var($orignalURL, FILTER_VALIDATE_URL)) {
+            $orignalURL      = $this->db->real_escape_string($orignalURL);
+            $customUniqueCode = $this->db->real_escape_string($customUniqueCode);
             $insert = $this->db->query("INSERT INTO link (url,code,created) VALUES ('{$orignalURL}','{$customUniqueCode}',NOW())");
             
             return true;
