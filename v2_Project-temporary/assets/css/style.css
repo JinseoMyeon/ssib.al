@@ -118,7 +118,7 @@ body {
     }
     
     #title {
-        margin-top: 303px;
+        margin-top: 27.5vh;
     }
 
     .title {
@@ -227,10 +227,31 @@ body {
         color: white;
     }
 
-    #scrollDownIcon {
-        display: inline-block;
+    #scrollDown {
+        top: 87vh;
+        width: 100vw;
+        position: absolute;
+        display: table;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #scrollDownIcon {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25px;
+        height: 25px;
+    }
+
+    #scrollDownText {
+        margin-top: 7px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 600;
+        font-size: 1.125rem;
+        color: var(--gray5);
     }
 
     #bFooter {
@@ -271,7 +292,7 @@ body {
     }
 
     #title {
-        margin-top: 29.5vw;
+        margin-top: 25vh;
     }
 
     .title {
@@ -358,8 +379,8 @@ body {
     #restriction {
         position: absolute;
         display: table;
-        margin-top: 152px;
-        top: 63vw;
+        top: 65vh;
+        margin-top: 15vw;
         margin-left: 5vw;
         width: 300px;
         height: 55px;
@@ -385,6 +406,31 @@ body {
         font-size: 1rem;
         font-weight: 600;
         color: white;
+    }
+
+    #scrollDown {
+        position: absolute;
+        right: 10vw;
+        top: 65.5vh;
+        margin-top: 15vw;
+    }
+
+    #scrollDownIcon {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25px;
+        height: 25px;
+    }
+
+    #scrollDownText {
+        margin-top: 7px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 600;
+        font-size: 1.125ream;
+        color: var(--gray5);
     }
 }
 
