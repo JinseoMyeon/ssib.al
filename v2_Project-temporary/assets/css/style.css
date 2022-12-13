@@ -78,23 +78,7 @@ body {
     height: 200vh;
 }
 
-.section {
-    scroll-snap-align:center;
-    scroll-snap-stop:always;
-}
 
-#scrollSection1 {
-    position: absolute;
-    width: 100vw;
-    height: 150vh;
-}
-
-#scrollSection2 {
-    position: absolute;
-    top: 100vh;
-    width: 100vw;
-    height: 150vh;
-}
 
 #wrapper {
     width: 100vw;
@@ -102,6 +86,25 @@ body {
 }
 
 @media screen and (min-width: 1025px) { /* for desktop and PC */
+
+    .section {
+        scroll-snap-align:center;
+        scroll-snap-stop:always;
+    }
+    
+    #scrollSection1 {
+        position: absolute;
+        width: 100vw;
+        height: 150vh;
+    }
+    
+    #scrollSection2 {
+        position: absolute;
+        top: 100vh;
+        width: 100vw;
+        height: 150vh;
+    }
+
     #header {
         position: fixed;
         z-index: 1;
@@ -275,10 +278,28 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {  /* for tablet */
+    .section {
+        scroll-snap-align:center;
+        scroll-snap-stop:always;
+    }
+    
+    #scrollSection1 {
+        position: absolute;
+        width: 100vw;
+        height: 150vh;
+    }
+    
+    #scrollSection2 {
+        position: absolute;
+        top: 100vh;
+        width: 100vw;
+        height: 150vh;
+    }
+
     #header {
         position: fixed;
         z-index: 1;
-        margin-left: 5vw;
+        margin-left: 7vw;
         width: 90vw;
         height: 100px;
     }
@@ -286,7 +307,7 @@ body {
     .logo {
         position: fixed;
         z-index: 1;
-        margin-top: 50px;
+        margin-top: 7vh;
         height: 6vw;
         max-height: 50px;
     }
@@ -369,7 +390,7 @@ body {
 
     #uniqueCodePlaceholder {
         position: absolute;
-        margin-top: 18.25px;
+        margin-top: 19.25px;
         font-size: 1.4rem;
         font-weight: 400;
         text-indent: 32px;
@@ -381,7 +402,7 @@ body {
         display: table;
         top: 65vh;
         margin-top: 15vw;
-        margin-left: 5vw;
+        margin-left: 7vw;
         width: 300px;
         height: 55px;
         border-radius: 20px;
@@ -432,21 +453,54 @@ body {
         font-size: 1.125ream;
         color: var(--gray5);
     }
+
+    #bFooter {
+        position: absolute;
+        top: 88vh;
+        left: 5vw;
+        background-color: var(--gray1);
+    }
+
+    .footerText {
+        font-size: 0.75rem;
+        font-weight: 400;
+        color: var(--gray3);
+    }
+
+    .footerBoldText {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--gray4);
+    }
 }
 
 @media screen and (max-width: 767px) { /* for mobile */
+    #scrollSection1 {
+        position: absolute;
+        width: 100vw;
+        height: 150vh;
+    }
+    
+    #scrollSection2 {
+        position: absolute;
+        top: 100vh;
+        width: 100vw;
+        height: 150vh;
+    }
+
     #header {
         position: fixed;
         z-index: 1;
-        margin-left: 5vw;
-        width: 90vw;
-        height: 13.05vw;
+        width: 100vw;
+        height: 15vw;
+        background-color: var(--gray1);
     }
 
     .logo {
         position: fixed;
         z-index: 1;
-        margin-top: calc(13.05vw - 7vw);
+        margin-left: 5vw;
+        margin-top: 7vw;
         height: 7vw;
         max-height: 46px;
     }
@@ -533,6 +587,7 @@ body {
 
     #uniqueCodePlaceholder {
         position: absolute;
+        margin-top: 1px;
         display: flex;
         align-items: center;
         height: 13vw;
@@ -543,5 +598,50 @@ body {
         font-weight: 400;
         text-indent: 21px;
         color: var(--gray3);
+    }
+
+    #scrollDown {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        top: 65.5vh;
+        margin-top: 15vw;
+    }
+
+    #scrollDownIcon {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        width: 16px;
+        height: 16px;
+    }
+
+    #scrollDownText {
+        margin-top: 5px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 600;
+        font-size: 0.75rem;
+        color: var(--gray5);
+    }
+
+    #bFooter {
+        position: absolute;
+        margin-top: 100vw;
+        top: 33vh;
+        left: 5vw;
+    }
+
+    .footerText {
+        font-size: 0.625rem;
+        font-weight: 400;
+        color: var(--gray3);
+    }
+
+    .footerBoldText {
+        font-size: 0.625rem;
+        font-weight: 500;
+        color: var(--gray4);
     }
 }
