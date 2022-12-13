@@ -29,6 +29,19 @@
     color:#cdcdcd
 }
 
+strong {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.blue {
+    color: #297DFC;
+}
+
+a {
+    text-decoration: none;
+}
+
 
 body {
     background-color: #f7f7f7;
@@ -51,6 +64,31 @@ body {
 @media screen and (max-width: 767px) {
     body {
         position:absolute;
+    }
+
+    .banner {
+        margin-top: 3vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100vw;
+        height: 8vw;
+        background: #D5E5FE;
+    }
+    
+    .bannerContent {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 2.85vw;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: #333333;
+    }
+    
+    .bannerText {
+        padding-top: 2.25vw;
     }
 
     .paragraph {
@@ -261,6 +299,31 @@ h1 {
     letter-spacing: -0.02em;
 
     color: #333333;
+}
+
+.banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    height: 40px;
+    border-radius: 0 0 20px 20px;
+    background: #D5E5FE;
+}
+
+.bannerContent {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #333333;
+}
+
+.bannerText {
+    padding-top: 10px;
 }
 
 .warning {
