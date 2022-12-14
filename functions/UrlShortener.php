@@ -183,7 +183,14 @@ class UrlShortener {
             die();
         }
 
-        if (strpos($customUniqueCode, '"') !== false || strpos($customUniqueCode, "'") !== false || strpos($customUniqueCode, "&") !== false || strpos($customUniqueCode,"(") !== false || strpos($customUniqueCode, "=") !== false) {
+        if (strpos($customUniqueCode, '"') !== false
+        || strpos($customUniqueCode, "'") !== false
+        || strpos($customUniqueCode, "&") !== false
+        || strpos($customUniqueCode,"(") !== false
+        || strpos($customUniqueCode,")") !== false
+        || strpos($customUniqueCode, "=") !== false
+        || strpos($customUniqueCode, "<") !== false
+        || strpos($customUniqueCode, ">") !== false) {
             header("Location: ../index.php?error=incorrect");
             die();
         }
