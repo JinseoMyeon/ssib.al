@@ -201,9 +201,8 @@ body {
 
     #restriction {
         position: absolute;
-        display: table;
         top: 87.5vh;
-        margin-left: 5vw;
+        left: 5vw;
         width: 300px;
         height: 55px;
         border-radius: 20px;
@@ -399,10 +398,9 @@ body {
 
     #restriction {
         position: absolute;
-        display: table;
         top: 65vh;
         margin-top: 15vw;
-        margin-left: 7vw;
+        left: 7vw;
         width: 300px;
         height: 55px;
         border-radius: 20px;
@@ -581,7 +579,7 @@ body {
         text-align: center;
         border-radius: 15px;
         font-size: 1.25rem;
-        border: 1px solid var(--gray2);
+        border: 1px solid var(--brand6);
         cursor : pointer;
     }
 
@@ -624,6 +622,34 @@ body {
         font-weight: 600;
         font-size: 0.75rem;
         color: var(--gray5);
+    }
+
+    #restriction {
+        position: relative;
+        top: 5.75px;
+        left: 2vw;
+        width: 13vw;
+        min-width: 40px;
+        max-width: 55px;
+        height: 13vw;
+        min-height: 40px;
+        max-height: 55px;
+        border-radius: 15px;
+        border: 0px;
+        background-color: var(--gray4);
+        cursor : pointer;
+    }
+
+    #warning {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    #warningText {
+        display: none;
     }
 
     #bFooter {
