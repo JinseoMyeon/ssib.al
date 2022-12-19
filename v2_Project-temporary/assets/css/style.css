@@ -17,12 +17,6 @@
     --brand5 : #5397FD;
     --brand6 : #297DFC;
 }
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 html {
     scroll-snap-type:y mandatory;
     scrollbar-width: none;
@@ -33,14 +27,21 @@ html::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 strong {
     font-weight: 500;
+    letter-spacing: -0.02em;
 }
 
 * {
     margin: 0em;
     padding: 0em;
     max-height: 100%;
+    letter-spacing: -0.02em;
     width: auto;
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     
@@ -95,14 +96,14 @@ body {
     #scrollSection1 {
         position: absolute;
         width: 100vw;
-        height: 150vh;
+        height: 100vh;
     }
     
     #scrollSection2 {
         position: absolute;
         top: 100vh;
         width: 100vw;
-        height: 150vh;
+        height: 100vh;
     }
 
     #header {
@@ -200,6 +201,7 @@ body {
     }
 
     #restriction {
+        z-index: 1;
         position: absolute;
         top: 87.5vh;
         left: 5vw;
@@ -217,6 +219,7 @@ body {
         top: 18px;
         width: 19px;
         height: 19px;
+        cursor : pointer;
     }
 
     #warningText {
@@ -227,9 +230,11 @@ body {
         font-size: 1rem;
         font-weight: 600;
         color: white;
+        cursor : pointer;
     }
 
     #scrollDown {
+        z-index: 0;
         top: 87vh;
         width: 100vw;
         position: absolute;
@@ -274,6 +279,192 @@ body {
         font-weight: 500;
         color: var(--gray4);
     }
+
+    /* ScrollSection 2 */
+
+    #scrollUp {
+        top: 5vh;
+        width: 100vw;
+        position: absolute;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #scrollUpIcon {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25px;
+        height: 25px;
+        transform: rotate(180deg);
+    }
+
+    #scrollUpText {
+        margin-top: 7px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 600;
+        font-size: 1.125rem;
+        color: var(--gray5);
+    }
+
+    #secondTitle {
+        margin-top: 27.5vh;
+        font-weight: 700;
+        font-size: 2rem;
+        color: var(--gray7);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #upperBlock {
+        position: relative;
+        margin-top: 50px;
+        width: 800px;
+        height: 170px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 30px;
+    }
+
+    #upperBlocks {
+        float: left;
+        position: relative;
+        width: 170px;
+        height: 170px;
+        margin-left: 30px;
+        background-color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #upperBlocks:hover {
+        background-color: var(--brand1);
+    }
+
+    #upperBlock1Icon {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #upperBlock2Icon {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #upperBlock3Icon {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #upperBlock4Icon {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #upperBlockText {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: var(--gray7);
+    }
+
+    #upperBlockTextActivated {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: var(--brand6);
+    }
+
+    #bottomBlock {
+        position: relative;
+        margin-top: 30px;
+        width: 800px;
+        height: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 30px;
+    }
+
+    #bottomBlocks {
+        float: left;
+        position: relative;
+        width: 370px;
+        height: 80px;
+        margin-left: 30px;
+        background-color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #bottomBlocks:hover {
+        background-color: var(--brand1);
+    }
+
+    #bottomBlock1Icon {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 43.5px;
+    }
+
+    #bottom1SmallText {
+        margin-left: 93.5px;
+        margin-top: -43.5px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--gray3);
+    }
+
+    #bottom1Text {
+        margin-left: 93.5px;
+        font-size: 1.375rem;
+        font-weight: 600;
+        color: var(--gray6);
+    }
+
+    #bottomBlock2Icon {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 49.5px;
+    }
+
+    #bottom2SmallText {
+        margin-left: 104.5px;
+        margin-top: -43.5px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--gray3);
+    }
+
+    #bottom2Text {
+        margin-left: 104.5px;
+        font-size: 1.375rem;
+        font-weight: 600;
+        color: var(--gray6);
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {  /* for tablet */
@@ -285,14 +476,14 @@ body {
     #scrollSection1 {
         position: absolute;
         width: 100vw;
-        height: 150vh;
+        height: 100vh;
     }
     
     #scrollSection2 {
         position: absolute;
         top: 100vh;
         width: 100vw;
-        height: 150vh;
+        height: 100vh;
     }
 
     #header {
@@ -452,6 +643,192 @@ body {
         color: var(--gray5);
     }
 
+    /* ScrollSection2 */
+
+    #scrollUp {
+        top: 7vh;
+        width: 100vw;
+        position: absolute;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #scrollUpIcon {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25px;
+        height: 25px;
+        transform: rotate(180deg);
+    }
+
+    #scrollUpText {
+        margin-top: 7px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 600;
+        font-size: 1.125rem;
+        color: var(--gray5);
+    }
+
+    #secondTitle {
+        margin-top: 27.5vh;
+        font-weight: 700;
+        font-size: 2rem;
+        color: var(--gray7);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #upperBlock {
+        position: relative;
+        margin-top: 50px;
+        width: 800px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 40px;
+    }
+
+    #upperBlocks {
+        float: left;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin-left: 30px;
+        background-color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #upperBlocks:hover {
+        background-color: var(--brand1);
+    }
+
+    #upperBlock1Icon {
+        position: absolute;
+        top: 40%;
+        left: 45%;
+        transform: translate(-40%, -40%);
+    }
+
+    #upperBlock2Icon {
+        position: absolute;
+        top: 40%;
+        left: 45%;
+        transform: translate(-40%, -40%);
+    }
+
+    #upperBlock3Icon {
+        position: absolute;
+        top: 40%;
+        left: 45%;
+        transform: translate(-40%, -40%);
+    }
+
+    #upperBlock4Icon {
+        position: absolute;
+        top: 40%;
+        left: 45%;
+        transform: translate(-40%, -40%);
+    }
+
+    #upperBlockText {
+        position: absolute;
+        top: 80%;
+        left: 45%;
+        transform: translate(-40%, -40%);
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: var(--gray7);
+    }
+
+    #upperBlockTextActivated {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: var(--brand6);
+    }
+
+    #bottomBlock {
+        position: relative;
+        margin-top: 30px;
+        width: 800px;
+        height: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 40px;
+    }
+
+    #bottomBlocks {
+        float: left;
+        position: relative;
+        width: 330px;
+        height: 80px;
+        margin-left: 30px;
+        background-color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #bottomBlocks:hover {
+        background-color: var(--brand1);
+    }
+
+    #bottomBlock1Icon {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 25px;
+    }
+
+    #bottom1SmallText {
+        margin-left: 77.5px;
+        margin-top: -43.5px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--gray3);
+    }
+
+    #bottom1Text {
+        margin-left: 77.5px;
+        font-size: 1.375rem;
+        font-weight: 600;
+        color: var(--gray6);
+    }
+
+    #bottomBlock2Icon {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 33px;
+    }
+
+    #bottom2SmallText {
+        margin-left: 88.5px;
+        margin-top: -43.5px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--gray3);
+    }
+
+    #bottom2Text {
+        margin-left: 88.5px;
+        font-size: 1.375rem;
+        font-weight: 600;
+        color: var(--gray6);
+    }
+
     #bFooter {
         position: absolute;
         top: 88vh;
@@ -473,17 +850,10 @@ body {
 }
 
 @media screen and (max-width: 767px) { /* for mobile */
-    #scrollSection1 {
-        position: absolute;
+
+    #scrollSection {
+        height: 310vw;
         width: 100vw;
-        height: 150vh;
-    }
-    
-    #scrollSection2 {
-        position: absolute;
-        top: 100vh;
-        width: 100vw;
-        height: 150vh;
     }
 
     #header {
@@ -599,35 +969,17 @@ body {
     }
 
     #scrollDown {
-        display: table;
+        display: none;
         margin-left: auto;
         margin-right: auto;
         top: 65.5vh;
         margin-top: 15vw;
     }
 
-    #scrollDownIcon {
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
-        width: 16px;
-        height: 16px;
-    }
-
-    #scrollDownText {
-        margin-top: 5px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        font-weight: 600;
-        font-size: 0.75rem;
-        color: var(--gray5);
-    }
-
     #restriction {
         position: relative;
-        top: 5.75px;
-        left: 2vw;
+        top: 2vw;
+        margin-left: 5vw;
         width: 13vw;
         min-width: 40px;
         max-width: 55px;
@@ -652,9 +1004,174 @@ body {
         display: none;
     }
 
+    /* ScrollSection2 */
+
+    #scrollUp {
+        top: 10vh;
+        width: 100vw;
+        position: absolute;
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #secondTitle {
+        margin-top: 200px;
+        font-weight: 700;
+        font-size: 5vw;
+        color: var(--gray7);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #upperBlock {
+        margin-top: 5vw;
+        margin-left: 10.5vw;
+        position: relative;
+        display: table;
+    }
+
+    #upperBlocks {
+        float: left;
+        position: relative;
+        width: 32vw;
+        height: 32vw;
+        margin-left: 5vw;
+        margin-top: 5vw;
+        background-color: white;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #upperBlocks:hover {
+        background-color: var(--brand1);
+    }
+
+    #upperBlock1Icon {
+        position: absolute;
+        top: 5vw;
+        left: 7.25vw;
+        width: 17.5vw;
+        height: 17.5vw;
+    }
+    #upperBlock2Icon {
+        position: absolute;
+        top: 5vw;
+        left: 7.25vw;
+        width: 17.5vw;
+        height: 17.5vw;
+    }
+    #upperBlock3Icon {
+        position: absolute;
+        top: 5vw;
+        left: 7.25vw;
+        width: 17.5vw;
+        height: 17.5vw;
+    }
+    #upperBlock4Icon {
+        position: absolute;
+        top: 5vw;
+        left: 7.25vw;
+        width: 17.5vw;
+        height: 17.5vw;
+    }
+
+    #upperBlockText {
+        position: absolute;
+        top: 22.5vw;
+        font-size: 4vw;
+        font-weight: 500;
+        width: 32vw;
+        text-align: center;
+        color: var(--gray7);
+    }
+
+    #upperBlockTextActivated {
+        position: absolute;
+        top: 22.5vw;
+        font-size: 4vw;
+        font-weight: 500;
+        width: 32vw;
+        text-align: center;
+        color: var(--brand6);
+    }
+
+    #bottomBlock {
+        width: 69vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #bottomBlocks {
+        float: left;
+        position: relative;
+        width: 69vw;
+        height: 15vw;
+        margin-top: 4vw;
+        background-color: white;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #bottomBlocks:hover {
+        background-color: var(--brand1);
+    }
+
+    #bottomBlock1Icon {
+        position: relative;
+        width: 7.5vw;
+        height: 7.5vw;
+        margin-top: 3.75vw;
+        margin-left: 7vw;
+    }
+    #bottom1SmallText {
+        position: absolute;
+        margin-left: 17vw;
+        margin-top: -8.5vw;
+        font-size: 3vw;
+        font-weight: 500;
+        color: var(--gray3);
+    }
+
+    #bottom1Text {
+        position: absolute;
+        margin-top: -5.25vw;
+        margin-left: 17vw;
+        font-size: 4.25vw;
+        font-weight: 600;
+        color: var(--gray6);
+    }
+
+    #bottomBlock2Icon {
+        position: relative;
+        width: 7.5vw;
+        height: 7.5vw;
+        margin-top: 3.75vw;
+        margin-left: 7vw;
+    }
+    #bottom2SmallText {
+        position: absolute;
+        margin-left: 17vw;
+        margin-top: -8.5vw;
+        font-size: 3vw;
+        font-weight: 500;
+        color: var(--gray3);
+    }
+    #bottom2Text {
+        position: absolute;
+        margin-top: -5.25vw;
+        margin-left: 17vw;
+        font-size: 4.25vw;
+        font-weight: 600;
+        color: var(--gray6);
+    }
+
     #bFooter {
         position: absolute;
-        margin-top: 100vw;
+        margin-top: 270vw;
         top: 33vh;
         left: 5vw;
     }
