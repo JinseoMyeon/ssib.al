@@ -253,7 +253,7 @@ body {
         border-radius: 20px;
         font-size: 1.5rem;
         font-weight: 400;
-        text-indent: 105px;
+        text-indent: 102.5px;
         border: 1px solid var(--gray2);
     }
 
@@ -275,7 +275,7 @@ body {
         margin-top: 17.5px;
         font-size: 1.5rem;
         font-weight: 400;
-        text-indent: 31px;
+        text-indent: 32.5px;
         color: var(--gray3);
     }
 
@@ -725,7 +725,7 @@ body {
         border-radius: 20px;
         font-size: 1.4rem;
         font-weight: 400;
-        text-indent: 100.5px;
+        text-indent: 95.5px;
         border: 1px solid var(--gray2);
     }
 
@@ -749,16 +749,18 @@ body {
         margin-top: 19.25px;
         font-size: 1.4rem;
         font-weight: 400;
-        text-indent: 32px;
+        text-indent: 27px;
         color: var(--gray3);
     }
+
+    
 
     #restriction {
         position: absolute;
         top: 65vh;
         margin-top: 15vw;
         left: 7vw;
-        width: 300px;
+        width: 290px;
         height: 55px;
         border-radius: 20px;
         border: 0px;
@@ -768,7 +770,7 @@ body {
 
     #warning {
         position: absolute;
-        left: 20px;
+        left: 19px;
         top: 18px;
         width: 19px;
         height: 19px;
@@ -778,7 +780,7 @@ body {
         position: absolute;
         display: table;
         top: 17.5px;
-        left: 47px;
+        left: 46px;
         font-size: 1rem;
         font-weight: 600;
         color: white;
