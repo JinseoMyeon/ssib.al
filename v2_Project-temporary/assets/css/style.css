@@ -17,6 +17,7 @@
     --brand5 : #5397FD;
     --brand6 : #297DFC;
 }
+
 html {
     scroll-snap-type:y mandatory;
     scrollbar-width: none;
@@ -33,7 +34,7 @@ a {
 }
 
 strong {
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -0.02em;
 }
 
@@ -86,7 +87,84 @@ body {
     height: auto;
 }
 
+#restrictionInfo {
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(242,244,248,0.5);
+    opacity: 0;
+    z-index: 2;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    transition : opacity 0.3s;
+}
+
 @media screen and (min-width: 1025px) { /* for desktop and PC */
+
+    #restrictionBackground {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        height: 400px;
+        background-color: rgba(255,255,255,1);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        z-index: 3;
+        border-radius: 20px;
+    }
+
+    .restrictionTitle {
+        margin-left: 50px;
+        margin-top: 50px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--gray6);
+    }
+
+    .restrictionText {
+        margin-left: 50px;
+        margin-top: 30px;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 2.25rem;
+        color: var(--gray6);
+    }
+
+    #restClose {
+        position: absolute;
+        margin-left: 625px;
+        margin-top: -40px;
+        width: 125px;
+        height: 45px;
+        border: none;
+        border-radius: 15px;
+        background-color: var(--brand6);
+        color: var(--gray1);
+        cursor: pointer;
+    }
+
+    #restText {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--gray1);
+    }
+
+    .restrictionTextGray {
+        margin-left: 50px;
+        margin-top: 30px;
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        color: var(--gray3);
+    }
 
     .section {
         scroll-snap-align:center;
@@ -468,6 +546,23 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {  /* for tablet */
+    #restrictionBackground {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: 40vh;
+        background-color: rgba(255,255,255,1);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        z-index: 3;
+        border-radius: 20px;
+    }
+
     .section {
         scroll-snap-align:center;
         scroll-snap-stop:always;
@@ -850,6 +945,23 @@ body {
 }
 
 @media screen and (max-width: 767px) { /* for mobile */
+
+    #restrictionBackground {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: 70vh;
+        background-color: rgba(255,255,255,1);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        z-index: 3;
+        border-radius: 20px;
+    }
 
     #scrollSection {
         height: 310vw;
