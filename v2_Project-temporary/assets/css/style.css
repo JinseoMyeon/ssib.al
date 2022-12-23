@@ -119,6 +119,7 @@ body {
         -webkit-backdrop-filter: none;
         z-index: 3;
         border-radius: 20px;
+        border: 1px solid var(--gray2);
     }
 
     .restrictionTitle {
@@ -283,7 +284,7 @@ body {
         position: absolute;
         top: 87.5vh;
         left: 5vw;
-        width: 300px;
+        width: 290px;
         height: 55px;
         border-radius: 20px;
         border: 0px;
@@ -293,7 +294,7 @@ body {
 
     #warning {
         position: absolute;
-        left: 20px;
+        left: 19px;
         top: 18px;
         width: 19px;
         height: 19px;
@@ -304,7 +305,7 @@ body {
         position: absolute;
         display: table;
         top: 17.5px;
-        left: 47px;
+        left: 46px;
         font-size: 1rem;
         font-weight: 600;
         color: white;
@@ -417,7 +418,18 @@ body {
         background-color: white;
         border-radius: 20px;
         cursor: pointer;
-        transition: 0.3s;
+        transition: background-color 0.3s;
+    }
+
+    #upperBlocksNotActivated {
+        float: left;
+        position: relative;
+        width: 170px;
+        height: 170px;
+        margin-left: 30px;
+        background-color: var(--gray2);
+        border-radius: 20px;
+        transition: background-color 0.3s;
     }
 
     #upperBlocks:hover {
@@ -432,7 +444,8 @@ body {
     }
 
     #upperBlock2Icon {
-        position: absolute;
+        display: none;
+        visibility: hidden;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -440,6 +453,7 @@ body {
 
     #upperBlock3Icon {
         position: absolute;
+        visibility: hidden;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -447,6 +461,7 @@ body {
 
     #upperBlock4Icon {
         position: absolute;
+        visibility: hidden;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -472,6 +487,16 @@ body {
         color: var(--brand6);
     }
 
+    #upperBlocksTextNotActivated {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: var(--gray5);
+    }
+
     #bottomBlock {
         position: relative;
         margin-top: 30px;
@@ -491,7 +516,7 @@ body {
         background-color: white;
         border-radius: 20px;
         cursor: pointer;
-        transition: 0.3s;
+        transition: background-color 0.3s;
     }
 
     #bottomBlocks:hover {
@@ -797,7 +822,7 @@ body {
         background-color: white;
         border-radius: 20px;
         cursor: pointer;
-        transition: 0.3s;
+        transition: background-color 0.3s;
     }
 
     #upperBlocks:hover {
@@ -813,6 +838,7 @@ body {
 
     #upperBlock2Icon {
         position: absolute;
+        visibility: hidden;
         top: 40%;
         left: 45%;
         transform: translate(-40%, -40%);
@@ -820,6 +846,7 @@ body {
 
     #upperBlock3Icon {
         position: absolute;
+        visibility: hidden;
         top: 40%;
         left: 45%;
         transform: translate(-40%, -40%);
@@ -827,6 +854,7 @@ body {
 
     #upperBlock4Icon {
         position: absolute;
+        visibility: hidden;
         top: 40%;
         left: 45%;
         transform: translate(-40%, -40%);
@@ -850,6 +878,27 @@ body {
         font-size: 1.125rem;
         font-weight: 500;
         color: var(--brand6);
+    }
+
+    #upperBlocksNotActivated {
+        float: left;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin-left: 30px;
+        background-color: var(--gray2);
+        border-radius: 20px;
+        transition: background-color 0.3s;
+    }
+
+    #upperBlocksTextNotActivated {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: var(--gray5);
     }
 
     #bottomBlock {
@@ -1154,7 +1203,7 @@ body {
         background-color: white;
         border-radius: 15px;
         cursor: pointer;
-        transition: 0.3s;
+        transition: background-color 0.3s;
     }
 
     #upperBlocks:hover {
@@ -1170,6 +1219,7 @@ body {
     }
     #upperBlock2Icon {
         position: absolute;
+        visibility: hidden;
         top: 5vw;
         left: 7.25vw;
         width: 17.5vw;
@@ -1177,6 +1227,7 @@ body {
     }
     #upperBlock3Icon {
         position: absolute;
+        visibility: hidden;
         top: 5vw;
         left: 7.25vw;
         width: 17.5vw;
@@ -1184,6 +1235,7 @@ body {
     }
     #upperBlock4Icon {
         position: absolute;
+        visibility: hidden;
         top: 5vw;
         left: 7.25vw;
         width: 17.5vw;
@@ -1210,6 +1262,28 @@ body {
         color: var(--brand6);
     }
 
+    #upperBlocksNotActivated {
+        float: left;
+        position: relative;
+        width: 32vw;
+        height: 32vw;
+        margin-left: 5vw;
+        margin-top: 5vw;
+        background-color: var(--gray2);
+        border-radius: 15px;
+        transition: background-color 0.3s;
+    }
+
+    #upperBlocksTextNotActivated {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4vw;
+        font-weight: 500;
+        color: var(--gray5);
+    }
+
     #bottomBlock {
         width: 69vw;
         margin-left: auto;
@@ -1225,7 +1299,7 @@ body {
         background-color: white;
         border-radius: 15px;
         cursor: pointer;
-        transition: 0.3s;
+        transition: background-color 0.3s;
     }
 
     #bottomBlocks:hover {
