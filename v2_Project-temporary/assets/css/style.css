@@ -577,7 +577,7 @@ body {
         top: 50%;
         transform: translate(-50%, -50%);
         width: 80vw;
-        height: 40vh;
+        height: 400px;
         background-color: rgba(255,255,255,1);
         visibility: hidden;
         opacity: 0;
@@ -586,6 +586,52 @@ body {
         -webkit-backdrop-filter: none;
         z-index: 3;
         border-radius: 20px;
+        border: 1px solid var(--gray2);
+    }
+
+    .restrictionTitle {
+        margin-left: 50px;
+        margin-top: 50px;
+        font-size: 1.375rem;
+        font-weight: 600;
+        color: var(--gray6);
+    }
+
+    .restrictionText {
+        margin-left: 50px;
+        margin-top: 30px;
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 2.25rem;
+        color: var(--gray6);
+    }
+
+    #restClose {
+        position: absolute;
+        right: 50px;
+        margin-top: -40px;
+        width: 110px;
+        height: 40px;
+        border: none;
+        border-radius: 15px;
+        background-color: var(--brand6);
+        color: var(--gray1);
+        cursor: pointer;
+    }
+
+    #restText {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--gray1);
+    }
+
+    .restrictionTextGray {
+        margin-left: 50px;
+        margin-top: 30px;
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        color: var(--gray3);
     }
 
     .section {
@@ -1001,7 +1047,7 @@ body {
         top: 50%;
         transform: translate(-50%, -50%);
         width: 80vw;
-        height: 70vh;
+        height: 60vh;
         background-color: rgba(255,255,255,1);
         visibility: hidden;
         opacity: 0;
@@ -1010,6 +1056,59 @@ body {
         -webkit-backdrop-filter: none;
         z-index: 3;
         border-radius: 20px;
+        border: 1px solid var(--gray2);
+    }
+
+    .restrictionTitle {
+        margin-left: 5vw;
+        margin-top: 5vw;
+        font-size: 4vw;
+        font-weight: 600;
+        color: var(--gray6);
+    }
+
+    #restrictionTexts {
+        margin-top: 2.5vw;
+        width: 80vw;
+        height: 35vh;
+        overflow:scroll;
+    }
+
+    .restrictionText {
+        margin-left: 5vw;
+        margin-top: 5vw;
+        font-size: 3vw;
+        font-weight: 400;
+        line-height: 5vw;
+        color: var(--gray6);
+    }
+
+    #restClose {
+        position: absolute;
+        bottom: 3.5vw;
+        margin-left: 5vw;
+        width: 70vw;
+        height: 40px;
+        border: none;
+        border-radius: 15px;
+        background-color: var(--brand6);
+        color: var(--gray1);
+        cursor: pointer;
+    }
+
+    #restText {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--gray1);
+    }
+
+    .restrictionTextGray {
+        margin-left: 5vw;
+        margin-top: 5vw;
+        font-size: 3vw;
+        font-weight: 400;
+        line-height: 4vw;
+        color: var(--gray3);
     }
 
     #scrollSection {
