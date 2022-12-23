@@ -13,3 +13,14 @@ function restrictionClose() {
     document.getElementById("restrictionBackground").style.visibility = "hidden";
     document.getElementById("restrictionBackground").style.opacity = "0.0";
 }
+
+function copy() {
+    const url = 'https://www.naver.com'
+    navigator.clipboard.writeText(`${url}`)
+    .then(()=>{
+        alert(`링크를 클립보드에 성공적으로 복사했어요!`)
+    })
+    .catch((err)=> {
+        alert(`복사에 실패했어요. 아쉽지만 주소를 직접 입력해주세요.`)
+    })
+}
