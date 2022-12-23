@@ -275,7 +275,7 @@ body {
         margin-top: 17.5px;
         font-size: 1.5rem;
         font-weight: 400;
-        text-indent: 32.5px;
+        text-indent: 32px;
         color: var(--gray3);
     }
 
@@ -725,7 +725,7 @@ body {
         border-radius: 20px;
         font-size: 1.4rem;
         font-weight: 400;
-        text-indent: 95.5px;
+        text-indent: 94.5px;
         border: 1px solid var(--gray2);
     }
 
@@ -749,7 +749,7 @@ body {
         margin-top: 19.25px;
         font-size: 1.4rem;
         font-weight: 400;
-        text-indent: 27px;
+        text-indent: 30px;
         color: var(--gray3);
     }
 
@@ -1194,7 +1194,7 @@ body {
         border-radius: 15px;
         font-size: 1.125rem;
         font-weight: 400;
-        text-indent: 76.5px;
+        text-indent: 74px;
         border: 1px solid var(--gray2);
     }
 
