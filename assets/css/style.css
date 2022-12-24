@@ -116,6 +116,9 @@ body {
         border-radius: 20px;
         z-index: 5;
         animation: slider 0.5s;
+    }
+
+    .pointer {
         cursor: pointer;
     }
       
@@ -650,6 +653,9 @@ body {
         border-radius: 20px;
         z-index: 5;
         animation: slider 0.5s;
+    }
+
+    .pointer {
         cursor: pointer;
     }
 
@@ -1188,6 +1194,9 @@ body {
         border-radius: 15px;
         z-index: 5;
         animation: slider 0.5s;
+    }
+
+    .pointer {
         cursor: pointer;
     }
 
@@ -1231,7 +1240,7 @@ body {
         transform: translate(0, -35%);
         color: #FF6767;
         font-weight: 600;
-        font-size: 1.25rem;
+        font-size: 5vw;
     }
 
     #resultText {

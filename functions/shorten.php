@@ -19,7 +19,7 @@ if (!$_POST['custom'] == '') {
     
     else {
         $errors            = true;
-        $_SESSION['error'] = '<p class="ignore shortenlink" style="color:#fe5151;">' . "ssib.al/" . $_POST['custom'] . "</p><p class='ignore shorten'>링크는 이미 존재합니다.</p>";
+        $_SESSION['error'] = '<p id="resultText">이 링크는 이미 누군가가 쓰고 있어요.</p>';
     }
 }
 
@@ -32,7 +32,7 @@ if (isset($_POST['url']) && !$errors) {
         }
         
         else {
-            $_SESSION['error'] = "잘못된 URL로 접근하셨습니다.";
+            $_SESSION['error'] = '<p id="resultText">잘못된 링크로 접속하셨어요.</p>';
         }
     }
     

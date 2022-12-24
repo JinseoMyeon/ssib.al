@@ -252,7 +252,7 @@ class UrlShortener {
      */
     
     public function generateLinkForShortURL($uniqueCode = '') {
-        return '<a class="shortenlink" href="' . BASE_URL . $uniqueCode . '">' . "ssib.al/" . $uniqueCode . '</a><p class="ignore shorten"> 링크로 단축했어요!</p>';
+        return '<p id="resultLinkSuccess"> ssib.al/' . $uniqueCode . '</p>';
     }
 }
 
