@@ -488,7 +488,7 @@ body {
         border-radius: 20px;
         cursor: pointer;
         transition: background-color 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #upperBlocksNotActivated {
@@ -587,7 +587,7 @@ body {
         border-radius: 20px;
         cursor: pointer;
         transition: background-color 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #bottomBlocks:hover {
@@ -1012,7 +1012,7 @@ body {
         border-radius: 20px;
         cursor: pointer;
         transition: background-color 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #upperBlocks:hover {
@@ -1111,7 +1111,7 @@ body {
         border-radius: 20px;
         cursor: pointer;
         transition: 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #bottomBlocks:hover {
@@ -1519,7 +1519,7 @@ body {
         border-radius: 15px;
         cursor: pointer;
         transition: background-color 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #upperBlocks:hover {
@@ -1616,7 +1616,7 @@ body {
         border-radius: 15px;
         cursor: pointer;
         transition: background-color 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #bottomBlocks:hover {
