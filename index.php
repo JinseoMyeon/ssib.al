@@ -17,7 +17,7 @@
     <meta name="naver-site-verification" content="b8c6d6c2cd25f58f7714a81dc07a2ff625124832" />
     <meta name="msvalidate.01" content="6E57E9298518AF4483787369C99AA184" />
     <link rel="stylesheet" href="./assets/css/style.css?after">
-    <link rel="favicon" href="./assets/image/favicon.ico">
+    <link rel="icon" href="./assets/image/favicon.ico">
     <title>씨발 | ssib.al</title>
 </head>
 <body>
