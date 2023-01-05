@@ -296,6 +296,12 @@ body {
         font-weight: 400;
         text-indent: 30px;
         border: 1px solid var(--gray2);
+        outline: 2px solid transparent;
+        transition: outline 0.3s ease;
+    }
+
+    #input:focus {
+        outline: 2px solid var(--brand6);
     }
 
     #shortenURL {
@@ -324,6 +330,12 @@ body {
         font-weight: 400;
         text-indent: 102.5px;
         border: 1px solid var(--gray2);
+        outline: 2px solid transparent;
+        transition: outline 0.3s ease;
+    }
+
+    #custom:focus {
+        outline: 2px solid var(--brand6);
     }
 
     .submit {
@@ -488,7 +500,7 @@ body {
         border-radius: 20px;
         cursor: pointer;
         transition: background-color 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #upperBlocksNotActivated {
@@ -587,7 +599,7 @@ body {
         border-radius: 20px;
         cursor: pointer;
         transition: background-color 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #bottomBlocks:hover {
@@ -838,6 +850,12 @@ body {
         font-weight: 400;
         text-indent: 30px;
         border: 1px solid var(--gray2);
+        outline: 2px solid transparent;
+        transition: outline 0.3s ease;
+    }
+
+    #input:focus {
+        outline: 2px solid var(--brand6);
     }
 
     #shortenURL {
@@ -868,6 +886,12 @@ body {
         font-weight: 400;
         text-indent: 94.5px;
         border: 1px solid var(--gray2);
+        outline: 2px solid transparent;
+        transition: outline 0.3s ease;
+    }
+
+    #custom:focus {
+        outline: 2px solid var(--brand6);
     }
 
     .submit {
@@ -1012,7 +1036,7 @@ body {
         border-radius: 20px;
         cursor: pointer;
         transition: background-color 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #upperBlocks:hover {
@@ -1111,7 +1135,7 @@ body {
         border-radius: 20px;
         cursor: pointer;
         transition: 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #bottomBlocks:hover {
@@ -1288,6 +1312,12 @@ body {
         width: 80vw;
         height: 35vh;
         overflow:scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    #restrictionTexts::-webkit-scrollbar {
+        display: none;
     }
 
     .restrictionText {
@@ -1379,6 +1409,12 @@ body {
         font-weight: 400;
         text-indent: 20px;
         border: 1px solid var(--gray2);
+        outline: 2px solid transparent;
+        transition: outline 0.3s ease;
+    }
+
+    #input:focus {
+        outline: 2px solid var(--brand6);
     }
 
     #shortenURL {
@@ -1410,6 +1446,12 @@ body {
         font-weight: 400;
         text-indent: 74px;
         border: 1px solid var(--gray2);
+        outline: 2px solid transparent;
+        transition: outline 0.3s ease;
+    }
+
+    #custom:focus {
+        outline: 2px solid var(--brand6);
     }
 
     .submit {
@@ -1519,7 +1561,7 @@ body {
         border-radius: 15px;
         cursor: pointer;
         transition: background-color 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #upperBlocks:hover {
@@ -1616,7 +1658,7 @@ body {
         border-radius: 15px;
         cursor: pointer;
         transition: background-color 0.3s;
-        border: 1px solid var(--gray2);
+        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #bottomBlocks:hover {
