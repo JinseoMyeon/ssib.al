@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./assets/css/style.css?after">
     <link rel="icon" href="./assets/image/favicon.ico">
     <title>씨발 | ssib.al</title>
+    
 </head>
 <body>
 <?php
@@ -116,12 +117,12 @@
                     <div id="userInput">
                         <form method="POST" action="functions/shorten.php">
                             <div id="originalURL">
-                                <input type="url" name="url" id="input" class="draggable input" value="https://" placeholder="줄이고 싶은 링크를 입력해주세요.">
+                                <input type="url" name="url" id="input" class="draggable input" value="https://" placeholder="줄이고 싶은 링크를 입력해주세요." autocomplete="off">
                             </div>
                             <div id="shortenURL">
                                 <div id="uniqueCode">
                                     <p id="uniqueCodePlaceholder">ssib.al/</p>
-                                    <input type="text" name="custom" id="custom" class="draggable" placeholder="대신할 이름(선택)">
+                                    <input type="text" name="custom" id="custom" class="draggable" placeholder="대신할 이름(선택)" autocomplete="off">
                                 </div>
                                 <div id="submit">
                                     <input type="submit" class="submit" id="shortenButton" value="링크 줄이기">
@@ -186,7 +187,7 @@
                 <div id="bFooter">
                     <p class="footerText">Copyright 2022-2023, <strong>JinseoMyeon</strong> All Rights Reserved.</p>
                     <p class="footerText">Email : i@ssib.al | GitHub : <a href="https://ssib.al/source">ssib.al/source</a></p>
-                    <p class="footerBoldText">ssib.al v2.0.1</p>
+                    <p class="footerBoldText">ssib.al v2.0.2</p>
                 </div>
             </div>
         </div>
