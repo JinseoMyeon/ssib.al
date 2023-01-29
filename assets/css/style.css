@@ -2,6 +2,8 @@
 @import url('https://unpkg.com/pageable@latest/dist/pageable.min.css');
 
 :root {
+    --white : #ffffff;
+    --white1 : #ffffff;
     --gray1 : #f2f4f8;
     --gray2 : #cad2df;
     --gray3 : #a9b2c0;
@@ -102,161 +104,358 @@ body {
     transition : opacity 0.3s;
 }
 
-@media screen and (min-width: 1025px) { /* for desktop and PC */
+.pointer {
+    cursor: pointer;
+}
 
+#shortenResult {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: var(--white);
+    border: 1px solid var(--gray2);
+    animation: slider 0.5s;
+    z-index: 5;
+}
+
+#resultImage {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#resultLinkSuccess {
+    position: absolute;
+    top: 35%;
+    transform: translate(0, -35%);
+    color: var(--brand6);
+    font-weight: 600;
+    text-decoration-line: none;
+}
+
+#resultLinkFailed {
+    position: absolute;
+    top: 35%;
+    transform: translate(0, -35%);
+    color: #FF6767;
+    font-weight: 600;
+}
+
+#resultText {
+    position: absolute;
+    top: 65%;
+    transform: translate(0, -65%);
+    color: var(--gray7);
+    font-weight: 400;
+}
+
+#restrictionBackground {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    z-index: 3;
+    border: 1px solid var(--gray2);
+}
+
+.restrictionTitle {
+    font-weight: 600;
+    color: var(--gray6);
+}
+
+.restrictionText {
+    font-weight: 400;
+    color: var(--gray6);
+}
+
+#restClose {
+    position: absolute;
+    border: none;
+    background-color: var(--brand6);
+    color: var(--gray1);
+}
+
+#restText {
+    font-weight: 600;
+    color: var(--gray1);
+}
+
+.restrictionTextGray {
+    font-weight: 400;
+    color: var(--gray3);
+}
+
+.section {
+    scroll-snap-align:center;
+    scroll-snap-stop:always;
+}
+
+#scrollSection1 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#scrollSection2 {
+    position: absolute;
+    top: 100vh;
+    width: 100vw;
+    height: 100vh;
+}
+
+#header {
+    position: fixed;
+    z-index: 1;
+}
+
+.title {
+    text-align: center;
+    color: var(--gray7);
+}
+
+#originalURL {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#input {
+    background-color: var(--white1);
+    color: var(--gray7);
+    font-weight: 400;
+    border: 1px solid var(--gray2);
+    outline: 2px solid transparent;
+    transition: outline 0.3s ease;
+}
+
+#input:focus {
+    outline: 2px solid var(--brand6);
+}
+
+#shortenURL {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#custom {
+    background-color: var(--white1);
+    color: var(--gray7);
+    font-weight: 400;
+    border: 1px solid var(--gray2);
+    outline: 2px solid transparent;
+    transition: outline 0.3s ease;
+}
+
+#custom:focus {
+    outline: 2px solid var(--brand6);
+}
+
+.submit {
+    background-color: var(--brand6);
+    color: var(--white);
+    border: 1px solid var(--gray2);
+    font-weight: 600;
+    text-align: center;
+    cursor : pointer;
+}
+
+#uniqueCodePlaceholder {
+    position: absolute;
+    font-weight: 400;
+    color: var(--gray3);
+}
+
+#restriction {
+    border: 0px;
+    background-color: var(--gray4);
+}
+
+#warningText {
+    position: absolute;
+    display: table;
+    top: 17.5px;
+    left: 46px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);    
+}
+
+#scrollDownIcon {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25px;
+    height: 25px;
+}
+
+#scrollDownText {
+    margin-top: 7px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--gray5);
+}
+
+.footerText {
+    font-weight: 400;
+    color: var(--gray3);
+}
+
+.footerBoldText {
+    font-weight: 500;
+    color: var(--gray4);
+}
+
+#scrollUp {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    position: absolute;
+}
+
+#scrollUpIcon {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25px;
+    height: 25px;
+    transform: rotate(180deg);
+}
+
+#scrollUpText {
+    margin-top: 7px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--gray5);
+}
+
+#secondTitle {
+    color: var(--gray7);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+}
+
+#upperBlocks {
+    float: left;
+    position: relative;
+    background-color: var(--white);
+    transition: background-color 0.3s;
+    box-shadow: 0 0 0 1px var(--gray2);
+
+}
+
+#upperBlocks:hover {
+    background-color: var(--brand1);
+}
+
+#upperBlocksNotActivated {
+    float: left;
+    position: relative;
+    transition: background-color 0.3s;
+    background-color: var(--gray2);
+}
+
+#bottomBlock {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bottomBlocks {
+    float: left;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 0 1px var(--gray2);
+    background-color: var(--white);
+}
+
+#bottomBlocks:hover {
+    background-color: var(--brand1);
+}
+
+@media screen and (min-width: 1025px) { /* for desktop and PC */
     #shortenResult {
-        position: fixed;
-        left: 50%;
         top: 50px;
-        transform: translate(-50%, 0);
         width: 500px;
         height: 100px;
-        background-color: white;
-        border: 1px solid var(--gray2);
         border-radius: 20px;
-        z-index: 5;
-        animation: slider 0.5s;
     }
-
-    .pointer {
-        cursor: pointer;
-    }
-      
-      @keyframes slider {
-        from {
-            top: -120px;
-        }
-        to {
-            top: 50px;
-        }
-      }
 
     #resultImage {
-        position: absolute;
         left: 40px;
-        top: 50%;
-        transform: translate(0, -50%);
         width: 55px;
         height: 55px;
-        border-radius: 50%;
-        z-index: 1;
     }
 
     #resultLinkSuccess {
-        position: absolute;
-        top: 35%;
         margin-left: 115px;
-        transform: translate(0, -35%);
-        color: var(--brand6);
-        font-weight: 600;
-        text-decoration-line: none;
         font-size: 1.5rem;
     }
 
     #resultLinkFailed {
-        position: absolute;
-        top: 35%;
         margin-left: 115px;
-        transform: translate(0, -35%);
-        color: #FF6767;
-        font-weight: 600;
         font-size: 1.5rem;
     }
 
     #resultText {
-        position: absolute;
-        top: 65%;
         margin-left: 115px;
-        transform: translate(0, -65%);
-        color: var(--gray7);
-        font-weight: 400;
         font-size: 1.125rem;
     }
 
     #restrictionBackground {
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         width: 800px;
         height: 400px;
-        background-color: rgba(255,255,255,1);
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.3s;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        z-index: 3;
         border-radius: 20px;
-        border: 1px solid var(--gray2);
     }
 
     .restrictionTitle {
         margin-left: 50px;
         margin-top: 50px;
         font-size: 1.5rem;
-        font-weight: 600;
-        color: var(--gray6);
     }
 
     .restrictionText {
         margin-left: 50px;
         margin-top: 30px;
         font-size: 1.25rem;
-        font-weight: 400;
         line-height: 2.25rem;
-        color: var(--gray6);
     }
 
     #restClose {
-        position: absolute;
         margin-left: 625px;
         margin-top: -40px;
         width: 125px;
         height: 45px;
-        border: none;
         border-radius: 15px;
-        background-color: var(--brand6);
-        color: var(--gray1);
-        cursor: pointer;
     }
 
     #restText {
         font-size: 1.125rem;
-        font-weight: 600;
-        color: var(--gray1);
     }
 
     .restrictionTextGray {
         margin-left: 50px;
         margin-top: 30px;
         font-size: 1.125rem;
-        font-weight: 400;
         line-height: 1.5rem;
-        color: var(--gray3);
-    }
-
-    .section {
-        scroll-snap-align:center;
-        scroll-snap-stop:always;
-    }
-    
-    #scrollSection1 {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-    }
-    
-    #scrollSection2 {
-        position: absolute;
-        top: 100vh;
-        width: 100vw;
-        height: 100vh;
     }
 
     #header {
-        position: fixed;
-        z-index: 1;
         margin-left: 5vw;
         width: 90vw;
         height: 100px;
@@ -274,41 +473,24 @@ body {
     }
 
     .title {
-        text-align: center;
-        color: var(--gray7);
         font-size: 4rem;
     }
 
     #originalURL {
         margin-top: 70px;
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     #input {
         width: 800px;
         height: 65px;
-        background-color: white;
-        color: var(--gray7);
         border-radius: 20px;
         font-size: 1.5rem;
-        font-weight: 400;
         text-indent: 30px;
-        border: 1px solid var(--gray2);
-        outline: 2px solid transparent;
-        transition: outline 0.3s ease;
-    }
-
-    #input:focus {
-        outline: 2px solid var(--brand6);
     }
 
     #shortenURL {
         margin-top: 20px;
         display: table;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     #uniqueCode {
@@ -323,41 +505,22 @@ body {
     #custom {
         width: 590px;
         height: 62px;
-        background-color: white;
-        color: var(--gray7);
         border-radius: 20px;
         font-size: 1.5rem;
-        font-weight: 400;
         text-indent: 102.5px;
-        border: 1px solid var(--gray2);
-        outline: 2px solid transparent;
-        transition: outline 0.3s ease;
-    }
-
-    #custom:focus {
-        outline: 2px solid var(--brand6);
     }
 
     .submit {
         width: 190px;
         height: 62px;
-        background-color: var(--brand6);
-        color: white;
-        font-weight: 600;
-        text-align: center;
         border-radius: 20px;
         font-size: 1.5rem;
-        border: 1px solid var(--gray2);
-        cursor : pointer;
     }
 
     #uniqueCodePlaceholder {
-        position: absolute;
         margin-top: 17.5px;
         font-size: 1.5rem;
-        font-weight: 400;
         text-indent: 32px;
-        color: var(--gray3);
     }
 
     #restriction {
@@ -368,9 +531,6 @@ body {
         width: 290px;
         height: 55px;
         border-radius: 20px;
-        border: 0px;
-        background-color: var(--gray4);
-        cursor : pointer;
     }
 
     #warning {
@@ -383,13 +543,6 @@ body {
     }
 
     #warningText {
-        position: absolute;
-        display: table;
-        top: 17.5px;
-        left: 46px;
-        font-size: 1rem;
-        font-weight: 600;
-        color: white;
         cursor : pointer;
     }
 
@@ -403,24 +556,6 @@ body {
         margin-right: auto;
     }
 
-    #scrollDownIcon {
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
-        width: 25px;
-        height: 25px;
-    }
-
-    #scrollDownText {
-        margin-top: 7px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        font-weight: 600;
-        font-size: 1.125rem;
-        color: var(--gray5);
-    }
-
     #bFooter {
         position: absolute;
         top: 88vh;
@@ -430,54 +565,22 @@ body {
 
     .footerText {
         font-size: 0.875rem;
-        font-weight: 400;
-        color: var(--gray3);
     }
 
     .footerBoldText {
         font-size: 0.875rem;
-        font-weight: 500;
-        color: var(--gray4);
     }
 
     /* ScrollSection 2 */
 
     #scrollUp {
         top: 5vh;
-        width: 100vw;
-        position: absolute;
         display: table;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #scrollUpIcon {
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
-        width: 25px;
-        height: 25px;
-        transform: rotate(180deg);
-    }
-
-    #scrollUpText {
-        margin-top: 7px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        font-weight: 600;
-        font-size: 1.125rem;
-        color: var(--gray5);
     }
 
     #secondTitle {
         margin-top: 27.5vh;
-        font-weight: 700;
         font-size: 2rem;
-        color: var(--gray7);
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     #upperBlock {
@@ -491,31 +594,17 @@ body {
     }
 
     #upperBlocks {
-        float: left;
-        position: relative;
         width: 170px;
         height: 170px;
         margin-left: 30px;
-        background-color: white;
         border-radius: 20px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        box-shadow: 0 0 0 1px var(--gray2);
     }
 
     #upperBlocksNotActivated {
-        float: left;
-        position: relative;
         width: 170px;
         height: 170px;
         margin-left: 30px;
-        background-color: var(--gray2);
         border-radius: 20px;
-        transition: background-color 0.3s;
-    }
-
-    #upperBlocks:hover {
-        background-color: var(--brand1);
     }
 
     #upperBlock1Icon {
@@ -524,7 +613,6 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-
     #upperBlock2Icon {
         display: none;
         visibility: hidden;
@@ -532,7 +620,6 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-
     #upperBlock3Icon {
         position: absolute;
         visibility: hidden;
@@ -540,7 +627,6 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-
     #upperBlock4Icon {
         position: absolute;
         visibility: hidden;
@@ -584,26 +670,14 @@ body {
         margin-top: 30px;
         width: 800px;
         height: 90px;
-        margin-left: auto;
-        margin-right: auto;
         padding-right: 30px;
     }
 
     #bottomBlocks {
-        float: left;
-        position: relative;
         width: 370px;
         height: 80px;
         margin-left: 30px;
-        background-color: white;
         border-radius: 20px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        box-shadow: 0 0 0 1px var(--gray2);
-    }
-
-    #bottomBlocks:hover {
-        background-color: var(--brand1);
     }
 
     #bottomBlock1Icon {
@@ -656,158 +730,73 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1024px) {  /* for tablet */
 
     #shortenResult {
-        position: fixed;
-        left: 50%;
         top: 50px;
         transform: translate(-50%, 0);
         width: 400px;
         height: 90px;
-        background-color: white;
-        border: 1px solid var(--gray2);
         border-radius: 20px;
-        z-index: 5;
-        animation: slider 0.5s;
     }
-
-    .pointer {
-        cursor: pointer;
-    }
-
-    @keyframes slider {
-        from {
-            top: -120px;
-        }
-        to {
-            top: 50px;
-        }
-      }
 
     #resultImage {
-        position: absolute;
         left: 30px;
-        top: 50%;
-        transform: translate(0, -50%);
         width: 50px;
         height: 50px;
-        border-radius: 50%;
-        z-index: 1;
     }
 
     #resultLinkSuccess {
-        position: absolute;
-        top: 35%;
         margin-left: 95px;
-        transform: translate(0, -35%);
-        color: var(--brand6);
-        font-weight: 600;
         font-size: 1.25rem;
-        text-decoration-line: none;
     }
 
     #resultLinkFailed {
-        position: absolute;
-        top: 35%;
         margin-left: 95px;
-        transform: translate(0, -35%);
-        color: #FF6767;
-        font-weight: 600;
         font-size: 1.25rem;
     }
 
     #resultText {
-        position: absolute;
-        top: 65%;
         margin-left: 95px;
-        transform: translate(0, -65%);
-        color: var(--gray7);
-        font-weight: 400;
         font-size: 1rem;
     }
 
     #restrictionBackground {
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         width: 80vw;
         height: 400px;
-        background-color: rgba(255,255,255,1);
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.3s;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        z-index: 3;
         border-radius: 20px;
-        border: 1px solid var(--gray2);
     }
 
     .restrictionTitle {
         margin-left: 50px;
         margin-top: 50px;
         font-size: 1.375rem;
-        font-weight: 600;
-        color: var(--gray6);
     }
 
     .restrictionText {
         margin-left: 50px;
         margin-top: 30px;
         font-size: 1.125rem;
-        font-weight: 400;
         line-height: 2.25rem;
-        color: var(--gray6);
     }
 
     #restClose {
-        position: absolute;
         right: 50px;
         margin-top: -40px;
         width: 110px;
         height: 40px;
-        border: none;
         border-radius: 15px;
-        background-color: var(--brand6);
-        color: var(--gray1);
-        cursor: pointer;
     }
 
     #restText {
         font-size: 1rem;
-        font-weight: 600;
-        color: var(--gray1);
     }
 
     .restrictionTextGray {
         margin-left: 50px;
         margin-top: 30px;
         font-size: 1.125rem;
-        font-weight: 400;
         line-height: 1.5rem;
-        color: var(--gray3);
-    }
-
-    .section {
-        scroll-snap-align:center;
-        scroll-snap-stop:always;
-    }
-    
-    #scrollSection1 {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-    }
-    
-    #scrollSection2 {
-        position: absolute;
-        top: 100vh;
-        width: 100vw;
-        height: 100vh;
     }
 
     #header {
-        position: fixed;
-        z-index: 1;
         margin-left: 7vw;
         width: 90vw;
         height: 100px;
@@ -826,16 +815,11 @@ body {
     }
 
     .title {
-        text-align: center;
-        color: var(--gray7);
         font-size: 6.25vw;
     }
 
     #originalURL {
         margin-top: 6.85vw;
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     #input {
@@ -843,26 +827,14 @@ body {
         max-width: 800px;
         height: 10vw;
         max-height: 65px;
-        background-color: white;
-        color: var(--gray7);
         border-radius: 20px;
         font-size: 1.5rem;
-        font-weight: 400;
         text-indent: 30px;
-        border: 1px solid var(--gray2);
-        outline: 2px solid transparent;
-        transition: outline 0.3s ease;
-    }
-
-    #input:focus {
-        outline: 2px solid var(--brand6);
     }
 
     #shortenURL {
         margin-top: 20px;
         display: table;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     #uniqueCode {
@@ -879,19 +851,9 @@ body {
         max-width: 590px;
         height: 10vw;
         max-height: 62px;
-        background-color: white;
-        color: var(--gray7);
         border-radius: 20px;
         font-size: 1.4rem;
-        font-weight: 400;
         text-indent: 94.5px;
-        border: 1px solid var(--gray2);
-        outline: 2px solid transparent;
-        transition: outline 0.3s ease;
-    }
-
-    #custom:focus {
-        outline: 2px solid var(--brand6);
     }
 
     .submit {
@@ -899,26 +861,15 @@ body {
         max-width: 190px;
         height: 10vw;
         max-height: 62px;
-        background-color: var(--brand6);
-        color: white;
-        font-weight: 600;
-        text-align: center;
         border-radius: 20px;
         font-size: 1.4rem;
-        border: 1px solid var(--gray2);
-        cursor : pointer;
     }
 
     #uniqueCodePlaceholder {
-        position: absolute;
         margin-top: 19.25px;
         font-size: 1.4rem;
-        font-weight: 400;
         text-indent: 30px;
-        color: var(--gray3);
     }
-
-    
 
     #restriction {
         position: absolute;
@@ -928,9 +879,6 @@ body {
         width: 290px;
         height: 55px;
         border-radius: 20px;
-        border: 0px;
-        background-color: var(--gray4);
-        cursor : pointer;
     }
 
     #warning {
@@ -942,13 +890,7 @@ body {
     }
 
     #warningText {
-        position: absolute;
-        display: table;
-        top: 17.5px;
-        left: 46px;
-        font-size: 1rem;
-        font-weight: 600;
-        color: white;
+        color: var(--white);
     }
 
     #scrollDown {
@@ -958,62 +900,16 @@ body {
         margin-top: 15vw;
     }
 
-    #scrollDownIcon {
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
-        width: 25px;
-        height: 25px;
-    }
-
-    #scrollDownText {
-        margin-top: 7px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        font-weight: 600;
-        font-size: 1.125ream;
-        color: var(--gray5);
-    }
-
     /* ScrollSection2 */
 
     #scrollUp {
         top: 7vh;
-        width: 100vw;
-        position: absolute;
         display: table;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #scrollUpIcon {
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
-        width: 25px;
-        height: 25px;
-        transform: rotate(180deg);
-    }
-
-    #scrollUpText {
-        margin-top: 7px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        font-weight: 600;
-        font-size: 1.125rem;
-        color: var(--gray5);
     }
 
     #secondTitle {
         margin-top: 27.5vh;
-        font-weight: 700;
         font-size: 2rem;
-        color: var(--gray7);
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     #upperBlock {
@@ -1027,20 +923,10 @@ body {
     }
 
     #upperBlocks {
-        float: left;
-        position: relative;
         width: 150px;
         height: 150px;
         margin-left: 30px;
-        background-color: white;
         border-radius: 20px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        box-shadow: 0 0 0 1px var(--gray2);
-    }
-
-    #upperBlocks:hover {
-        background-color: var(--brand1);
     }
 
     #upperBlock1Icon {
@@ -1049,7 +935,6 @@ body {
         left: 45%;
         transform: translate(-40%, -40%);
     }
-
     #upperBlock2Icon {
         position: absolute;
         visibility: hidden;
@@ -1057,7 +942,6 @@ body {
         left: 45%;
         transform: translate(-40%, -40%);
     }
-
     #upperBlock3Icon {
         position: absolute;
         visibility: hidden;
@@ -1065,7 +949,6 @@ body {
         left: 45%;
         transform: translate(-40%, -40%);
     }
-
     #upperBlock4Icon {
         position: absolute;
         visibility: hidden;
@@ -1095,14 +978,10 @@ body {
     }
 
     #upperBlocksNotActivated {
-        float: left;
-        position: relative;
         width: 150px;
         height: 150px;
         margin-left: 30px;
-        background-color: var(--gray2);
         border-radius: 20px;
-        transition: background-color 0.3s;
     }
 
     #upperBlocksTextNotActivated {
@@ -1120,26 +999,14 @@ body {
         margin-top: 30px;
         width: 800px;
         height: 90px;
-        margin-left: auto;
-        margin-right: auto;
         padding-left: 40px;
     }
 
     #bottomBlocks {
-        float: left;
-        position: relative;
         width: 330px;
         height: 80px;
         margin-left: 30px;
-        background-color: white;
         border-radius: 20px;
-        cursor: pointer;
-        transition: 0.3s;
-        box-shadow: 0 0 0 1px var(--gray2);
-    }
-
-    #bottomBlocks:hover {
-        background-color: var(--brand1);
     }
 
     #bottomBlock1Icon {
@@ -1197,114 +1064,55 @@ body {
 
     .footerText {
         font-size: 0.75rem;
-        font-weight: 400;
-        color: var(--gray3);
     }
 
     .footerBoldText {
         font-size: 0.75rem;
-        font-weight: 500;
-        color: var(--gray4);
     }
 }
 
 @media screen and (max-width: 767px) { /* for mobile */
 
     #shortenResult {
-        position: fixed;
-        left: 50%;
         top: 5vh;
-        transform: translate(-50%, 0);
         width: 90vw;
         height: 20vw;
-        background-color: white;
-        border: 1px solid var(--gray2);
         border-radius: 15px;
-        z-index: 5;
-        animation: slider 0.5s;
     }
-
-    .pointer {
-        cursor: pointer;
-    }
-
-    @keyframes slider {
-        from {
-            top: -120px;
-        }
-        to {
-            top: 5vh;
-        }
-      }
 
     #resultImage {
-        position: absolute;
         left: 7vw;
-        top: 50%;
-        transform: translate(0, -50%);
         width: 10vw;
         height: 10vw;
-        border-radius: 50%;
-        z-index: 1;
     }
 
     #resultLinkSuccess {
-        position: absolute;
-        top: 35%;
         margin-left: 21vw;
         width: 60vw;
         overflow: hidden;
-        transform: translate(0, -35%);
-        color: var(--brand6);
-        font-weight: 600;
         font-size: 5vw;
-        text-decoration-line: none;
     }
 
     #resultLinkFailed {
-        position: absolute;
-        top: 35%;
         margin-left: 21vw;
-        transform: translate(0, -35%);
-        color: #FF6767;
-        font-weight: 600;
         font-size: 5vw;
     }
 
     #resultText {
-        position: absolute;
-        top: 65%;
         margin-left: 21vw;
-        transform: translate(0, -65%);
-        color: var(--gray7);
-        font-weight: 400;
         font-size: 3.5vw;
     }
 
     #restrictionBackground {
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         width: 80vw;
         height: 60vh;
-        background-color: rgba(255,255,255,1);
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.3s;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        z-index: 3;
         border-radius: 15px;
-        border: 1px solid var(--gray2);
     }
 
     .restrictionTitle {
         margin-left: 5vw;
         margin-top: 5vw;
         font-size: 4vw;
-        font-weight: 600;
-        color: var(--gray6);
     }
 
     #restrictionTexts {
@@ -1324,37 +1132,26 @@ body {
         margin-left: 5vw;
         margin-top: 5vw;
         font-size: 3vw;
-        font-weight: 400;
         line-height: 5vw;
-        color: var(--gray6);
     }
 
     #restClose {
-        position: absolute;
         bottom: 3.5vw;
         margin-left: 5vw;
         width: 70vw;
         height: 40px;
-        border: none;
         border-radius: 10px;
-        background-color: var(--brand6);
-        color: var(--gray1);
-        cursor: pointer;
     }
 
     #restText {
         font-size: 1rem;
-        font-weight: 600;
-        color: var(--gray1);
     }
 
     .restrictionTextGray {
         margin-left: 5vw;
         margin-top: 5vw;
         font-size: 3vw;
-        font-weight: 400;
         line-height: 4vw;
-        color: var(--gray3);
     }
 
     #scrollSection {
@@ -1363,8 +1160,6 @@ body {
     }
 
     #header {
-        position: fixed;
-        z-index: 1;
         width: 100vw;
         height: 15vw;
         background-color: var(--gray1);
@@ -1384,16 +1179,11 @@ body {
     }
 
     .title {
-        text-align: center;
-        color: var(--gray7);
         font-size: 9vw;
     }
 
     #originalURL {
         margin-top: 15vw;
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     #input {
@@ -1402,25 +1192,13 @@ body {
         height: 13vw;
         min-height: 40px;
         max-height: 55px;
-        background-color: white;
-        color: var(--gray7);
         border-radius: 15px;
         font-size: 1.125rem;
-        font-weight: 400;
         text-indent: 20px;
-        border: 1px solid var(--gray2);
-        outline: 2px solid transparent;
-        transition: outline 0.3s ease;
-    }
-
-    #input:focus {
-        outline: 2px solid var(--brand6);
     }
 
     #shortenURL {
         margin-top: 2.5vw;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     #uniqueCode {
@@ -1439,19 +1217,9 @@ body {
         height: 13vw;
         min-height: 40px;
         max-height: 55px;
-        background-color: white;
-        color: var(--gray7);
         border-radius: 15px;
         font-size: 1.125rem;
-        font-weight: 400;
         text-indent: 74px;
-        border: 1px solid var(--gray2);
-        outline: 2px solid transparent;
-        transition: outline 0.3s ease;
-    }
-
-    #custom:focus {
-        outline: 2px solid var(--brand6);
     }
 
     .submit {
@@ -1461,18 +1229,11 @@ body {
         height: 13vw;
         min-height: 40px;
         max-height: 55px;
-        background-color: var(--brand6);
-        color: white;
-        font-weight: 600;
-        text-align: center;
         border-radius: 15px;
         font-size: 1.25rem;
-        border: 1px solid var(--brand6);
-        cursor : pointer;
     }
 
     #uniqueCodePlaceholder {
-        position: absolute;
         margin-top: 1px;
         display: flex;
         align-items: center;
@@ -1481,9 +1242,7 @@ body {
         max-height: 55px;
         text-align: center;
         font-size: 1.125rem;
-        font-weight: 400;
         text-indent: 21px;
-        color: var(--gray3);
     }
 
     #scrollDown {
@@ -1505,9 +1264,6 @@ body {
         min-height: 40px;
         max-height: 55px;
         border-radius: 15px;
-        border: 0px;
-        background-color: var(--gray4);
-        cursor : pointer;
     }
 
     #warning {
@@ -1526,21 +1282,12 @@ body {
 
     #scrollUp {
         top: 10vh;
-        width: 100vw;
-        position: absolute;
         display: none;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     #secondTitle {
         margin-top: 200px;
-        font-weight: 700;
         font-size: 5vw;
-        color: var(--gray7);
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     #upperBlock {
@@ -1551,21 +1298,11 @@ body {
     }
 
     #upperBlocks {
-        float: left;
-        position: relative;
         width: 32vw;
         height: 32vw;
         margin-left: 5vw;
         margin-top: 5vw;
-        background-color: white;
         border-radius: 15px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        box-shadow: 0 0 0 1px var(--gray2);
-    }
-
-    #upperBlocks:hover {
-        background-color: var(--brand1);
     }
 
     #upperBlock1Icon {
@@ -1621,15 +1358,11 @@ body {
     }
 
     #upperBlocksNotActivated {
-        float: left;
-        position: relative;
         width: 32vw;
         height: 32vw;
         margin-left: 5vw;
         margin-top: 5vw;
-        background-color: var(--gray2);
         border-radius: 15px;
-        transition: background-color 0.3s;
     }
 
     #upperBlocksTextNotActivated {
@@ -1644,25 +1377,13 @@ body {
 
     #bottomBlock {
         width: 69vw;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     #bottomBlocks {
-        float: left;
-        position: relative;
         width: 69vw;
         height: 15vw;
         margin-top: 4vw;
-        background-color: white;
         border-radius: 15px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        box-shadow: 0 0 0 1px var(--gray2);
-    }
-
-    #bottomBlocks:hover {
-        background-color: var(--brand1);
     }
 
     #bottomBlock1Icon {
@@ -1723,13 +1444,9 @@ body {
 
     .footerText {
         font-size: 0.625rem;
-        font-weight: 400;
-        color: var(--gray3);
     }
 
     .footerBoldText {
         font-size: 0.625rem;
-        font-weight: 500;
-        color: var(--gray4);
     }
 }
