@@ -98,7 +98,7 @@
                 어떠한 일에도 <strong>별도의 책임을 지지 않습니다</strong>.
             </p>
         </div>
-        <button id="restClose" name="restClose">
+        <button id="restClose" class="pointer" name="restClose">
             <p id="restText">확인 완료</p>
         </button>
     </div>
@@ -125,11 +125,11 @@
                                     <input type="text" name="custom" id="custom" class="draggable" placeholder="대신할 이름(선택)" autocomplete="off">
                                 </div>
                                 <div id="submit">
-                                    <input type="submit" class="submit" id="shortenButton" value="링크 줄이기">
+                                    <input type="submit" class="submit pointer" id="shortenButton" value="링크 줄이기">
                                 </div>
                             </div>
                         </form>
-                        <button id="restriction" name="restriction">
+                        <button id="restriction" class="pointer" name="restriction">
                             <img id="warning" src="./assets/image/linkShortenWarning.svg">
                             <p id="warningText">이런 사이트는 링크를 줄일 수 없어요.</p>
                         </button>
