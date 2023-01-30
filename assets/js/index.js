@@ -26,18 +26,22 @@ if (storedTheme !== null) {
 } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     darkmode = 1;
     changeThemeDark();
+    localStorage.setItem("darkTheme", "true");
 } else {
     changeThemeLight();
+    localStorage.setItem("darkTheme", "false");
 }
 
 document.getElementById("toggleThemeLight").addEventListener("click", () => {
     darkmode = 1;
     changeThemeDark();
+    localStorage.setItem("darkTheme", "true");
 });
 
 document.getElementById("toggleThemeDark").addEventListener("click", () => {
     darkmode = 0;
     changeThemeLight();
+    localStorage.setItem("darkTheme", "false");
 });
 
 document.getElementById("restriction").addEventListener("click", () => {
