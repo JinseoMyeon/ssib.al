@@ -1,0 +1,11 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.5455 10C13.5455 11.9581 11.9582 13.5455 10.0001 13.5455C8.04195 13.5455 6.45459 11.9581 6.45459 10C6.45459 8.04195 8.04195 6.45459 10.0001 6.45459C11.9582 6.45459 13.5455 8.04195 13.5455 10Z" fill="#F2F4F8" stroke="#F2F4F8" stroke-width="2"/>
+<line x1="9.90918" y1="3.63635" x2="9.90918" y2="-1.1162e-05" stroke="#F2F4F8" stroke-width="2"/>
+<line x1="16.3638" y1="9.90906" x2="20.0002" y2="9.90906" stroke="#F2F4F8" stroke-width="2"/>
+<line x1="10.0908" y1="16.3636" x2="10.0908" y2="20" stroke="#F2F4F8" stroke-width="2"/>
+<line x1="3.63623" y1="10.0909" x2="-0.000153065" y2="10.0909" stroke="#F2F4F8" stroke-width="2"/>
+<path d="M14.5454 14.5455L17.1167 17.1168" stroke="#F2F4F8" stroke-width="2"/>
+<path d="M14.5454 5.45459L17.1167 2.88329" stroke="#F2F4F8" stroke-width="2"/>
+<path d="M5.45459 5.45459L2.88328 2.88329" stroke="#F2F4F8" stroke-width="2"/>
+<path d="M5.45459 14.5455L2.88328 17.1168" stroke="#F2F4F8" stroke-width="2"/>
+</svg>
