@@ -199,11 +199,6 @@ body {
     color: var(--gray3);
 }
 
-.section {
-    scroll-snap-align:center;
-    scroll-snap-stop:always;
-}
-
 #scrollSection1 {
     position: absolute;
     width: 100vw;
@@ -423,6 +418,11 @@ body {
 }
 
 @media screen and (min-width: 1025px) { /* for desktop and PC */
+    .section {
+        scroll-snap-align:center;
+        scroll-snap-stop:always;
+    }
+
     #shortenResult {
         top: 50px;
         width: 500px;
@@ -782,6 +782,10 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {  /* for tablet */
+    .section {
+        scroll-snap-align:center;
+        scroll-snap-stop:always;
+    }
 
     #shortenResult {
         top: 50px;
@@ -1466,6 +1470,7 @@ body {
 
     #bottomBlock {
         width: 69vw;
+        height: 38vw;
     }
 
     #bottomBlocks {
@@ -1528,8 +1533,8 @@ body {
 
     #bFooter {
         position: absolute;
-        margin-top: 270vw;
-        top: 33vh;
+        margin-top: 30vw;
+        padding-bottom: 10px;
         left: 5vw;
     }
 
