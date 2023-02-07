@@ -92,11 +92,23 @@ class UrlShortener {
             die();
         }
 
+        else if(strpos(strtolower($orignalURL), "ssib.al") !== false) {
+            header("Location: ../index.php?error=recursion");
+            die();
+        }
+
         else if ($pingResult == -1) {
             header("Location: ../index.php?error=inurl");
             die();
         }
 
+        else if (strpos(strtolower($orignalURL), "https://https://") !== false
+            || strpos(strtolower($orignalURL), "https://http://") !== false
+            || strpos(strtolower($orignalURL), "http://https://") !== false
+            || strpos(strtolower($orignalURL), "http://http://") !== false) {
+          header("Location: ../index.php?error=inurl");
+          die();
+      }
 
         else {
             $orignalURL      = $this->db->real_escape_string($orignalURL);
@@ -161,11 +173,6 @@ class UrlShortener {
         if ($getFilter->num_rows > 0) {
             header("Location: ../index.php?error=filter");
             $updateInDatabase = $this->db->query("UPDATE link_censored SET counts = counts + 1 WHERE url LIKE '%$pingURL[0]%'");
-            die();
-        }
-
-        if(strpos(strtolower($orignalURL), "ssib.al") !== false) {
-            header("Location: ../index.php?error=recursion");
             die();
         }
 
