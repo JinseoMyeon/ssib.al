@@ -50,7 +50,7 @@
         echo "<div id='shortenResult'>
         <img id='resultImage' src='./assets/image/FailedIcon.svg' alt='shortenFinished'>
         <p id='resultLinkFailed'>오류가 발생했어요.</p>
-        <p id='resultText'>잘못된 링크로 접속하셨어요.</p>
+        <p id='resultText'>오타가 있거나 잘못 입력했는지 확인해주세요.</p>
         </div>";
     }
     if (isset($_GET['error']) && $_GET['error'] == 'dnp') {
