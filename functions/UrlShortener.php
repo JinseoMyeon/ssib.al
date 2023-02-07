@@ -69,11 +69,6 @@ class UrlShortener {
         }
 
         $orignalURL = trim($orignalURL);
-        $orignalURL = str_replace("https://https://", "https://", $orignalURL);
-        $orignalURL = str_replace("https://http://", "http://", $orignalURL);
-        $orignalURL = str_replace("http://https://", "https://", $orignalURL);
-        $orignalURL = str_replace("http://http://", "http://", $orignalURL);
-
         $pingURL = str_replace("https://", "", $orignalURL);
         $pingURL = str_replace("http://", "", $pingURL);
         $pingURL = explode('/',$pingURL);
