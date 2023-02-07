@@ -100,10 +100,6 @@ class UrlShortener {
 
         else {
             $orignalURL      = $this->db->real_escape_string($orignalURL);
-            $orignalURL = str_replace("https://https://", "https://", $orignalURL);
-            $orignalURL = str_replace("https://http://", "http://", $orignalURL);
-            $orignalURL = str_replace("http://https://", "https://", $orignalURL);
-            $orignalURL = str_replace("http://http://", "http://", $orignalURL);
 
             $existInDatabase = $this->db->query("SELECT * FROM link WHERE url ='{$orignalURL}'");
             
@@ -168,17 +164,25 @@ class UrlShortener {
             die();
         }
 
-        if(strpos(strtolower($orignalURL), "https://ssib.al/") !== false) {
+        if(strpos(strtolower($orignalURL), "ssib.al") !== false) {
             header("Location: ../index.php?error=recursion");
             die();
         }
 
-        else if(strpos(strtolower($orignalURL), "http://ssib.al/") !== false) {
+        else if(strpos(strtolower($orignalURL), "ssib.al") !== false) {
             header("Location: ../index.php?error=recursion");
             die();
         }
 
         else if ($pingResult == -1) {
+            header("Location: ../index.php?error=inurl");
+            die();
+        }
+
+        else if (strpos(strtolower($orignalURL), "https://https://") !== false
+              || strpos(strtolower($orignalURL), "https://http://") !== false
+              || strpos(strtolower($orignalURL), "http://https://") !== false
+              || strpos(strtolower($orignalURL), "http://http://") !== false) {
             header("Location: ../index.php?error=inurl");
             die();
         }
