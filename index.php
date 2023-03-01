@@ -205,7 +205,8 @@
                 <div id="bFooter">
                     <p class="footerText">Copyright 2022-2023, <strong>JinseoMyeon</strong> All Rights Reserved.</p>
                     <p class="footerText">Email : i@ssib.al | GitHub : <a href="https://ssib.al/source">ssib.al/source</a></p>
-                    <p class="footerBoldText">ssib.al v2.1.2</p>
+                    <p class="footerText">개인정보 이용 및 처리 안내 (준비 중)</p>
+                    <p class="footerBoldText">ssib.al v2.1.3</p>
                 </div>
             </div>
         </div>
