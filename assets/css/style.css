@@ -234,7 +234,6 @@ body {
     border: 1px solid var(--sgray2);
     outline: 2px solid transparent;
     transition: outline 0.3s ease;
-    transition: background-color 0.3s;
 }
 
 #input:focus {
@@ -253,7 +252,6 @@ body {
     border: 1px solid var(--sgray2);
     outline: 2px solid transparent;
     transition: outline 0.3s ease;
-    transition: background-color 0.3s;
 }
 
 #custom:focus {
@@ -267,7 +265,6 @@ body {
     font-weight: 600;
     text-align: center;
     cursor : pointer;
-    transition: background-color 0.3s;
 }
 
 .submit:hover {
@@ -283,7 +280,6 @@ body {
 #restriction {
     border: 0px;
     background-color: var(--gray4);
-    transition: background-color 0.3s;
 }
 
 #restriction:hover {
@@ -301,15 +297,15 @@ body {
 }
 
 #scrollDownIcon {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
     width: 25px;
     height: 25px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #scrollDownText {
-    margin-top: 7px;
+    margin-top: 35px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -336,16 +332,17 @@ body {
 }
 
 #scrollUpIcon {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
     width: 25px;
     height: 25px;
+    left: 50%;
+    transform: translateX(-50%);
     transform: rotate(180deg);
+    margin-left: -12.5px;
 }
 
 #scrollUpText {
-    margin-top: 7px;
+    margin-top: 35px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -663,6 +660,8 @@ body {
         top: 52.5%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 85px;
+        height: 85px;
     }
     #upperBlock2Icon {
         display: none;
@@ -670,6 +669,8 @@ body {
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 85px;
+        height: 85px;
     }
     #upperBlock3Icon {
         position: absolute;
@@ -677,6 +678,8 @@ body {
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 85px;
+        height: 85px;
     }
     #upperBlock4Icon {
         position: absolute;
@@ -684,6 +687,8 @@ body {
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 85px;
+        height: 85px;
     }
 
     #upperBlockText {
@@ -1005,6 +1010,8 @@ body {
         top: 47.5%;
         left: 45%;
         transform: translate(-40%, -40%);
+        width: 85px;
+        height: 85px;
     }
     #upperBlock2Icon {
         position: absolute;
@@ -1012,6 +1019,8 @@ body {
         top: 40%;
         left: 45%;
         transform: translate(-40%, -40%);
+        width: 85px;
+        height: 85px;
     }
     #upperBlock3Icon {
         position: absolute;
@@ -1019,6 +1028,8 @@ body {
         top: 40%;
         left: 45%;
         transform: translate(-40%, -40%);
+        width: 85px;
+        height: 85px;
     }
     #upperBlock4Icon {
         position: absolute;
@@ -1026,6 +1037,8 @@ body {
         top: 40%;
         left: 45%;
         transform: translate(-40%, -40%);
+        width: 85px;
+        height: 85px;
     }
 
     #upperBlockText {
@@ -1532,7 +1545,7 @@ body {
 
     #bFooter {
         position: absolute;
-        margin-top: 30vw;
+        margin-top: 12.5vw;
         padding-bottom: 10px;
         left: 5vw;
     }
