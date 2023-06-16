@@ -34,9 +34,8 @@ i@ssib.al:~$ service-info 'https://ssib.al/'
 
 ### Roadmap -
 * 장난을 치고자 하는 사람들을 위한 모드 제작
-* 다크모드 대응
 * URL 입력 방식 개선 / URL 입력 후 커스텀 코드 입력창 표시 (애니메이션 효과와 함께)
-* <del>추후 php 기반으로 작동되고 있는 링크 단축 시스템을 JavaScript로 옮기고자 합니다</del> < 현재 사용하는 웹 호스팅이 만료되거나 다른 대안을 찾기 전까지는 진행하지 않을 듯 합니다.
+* 추후 php 기반으로 작동되고 있는 링크 단축 시스템을 JavaScript로 옮기고자 합니다
 
 ##
 URL Shortener Source code from https://github.com/urls/url-shortener-php (Some of code had changed for this site.)
