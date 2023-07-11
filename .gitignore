@@ -3,6 +3,5 @@ config.php
 .DS_Store
 .htaccess
 .htaccess_ssibal
-index.html
 index_v1.html
 assets/js/fullPageScrolling.js
