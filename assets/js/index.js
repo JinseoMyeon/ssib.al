@@ -164,9 +164,27 @@ function changeResult(success,description) {
 }
 
 function apiRequest() {
+    var url = document.getElementById("input").value;
     var customCode = document.getElementById("custom").value;
+
+    if (url === "") {
+        changeResult(0, "URL이 입력되지 않았어요.");
+        return;
+    }
+
+    // some symbols are not allowed in URL
+    if (url.includes("\\") || url.includes("/*") || url.includes("*/") || url.includes("(") || url.includes(")") || url.includes("+") || url.includes("%0b") || url.includes("%0c") || url.includes("%a0") || url.includes("||") || url.includes("&&")) {
+        changeResult(0, "허용되지 않는 문자가 포함되어 있어요.");
+        return;
+    }
+
+    // some symbols are not allowed in custom code
+    if (customCode.includes("\\") || customCode.includes("/*") || customCode.includes("*/") || customCode.includes("(") || customCode.includes(")") || customCode.includes("+") || customCode.includes("%0b") || customCode.includes("%0c") || customCode.includes("%a0") || customCode.includes("||") || customCode.includes("&&")) {
+        changeResult(0, "허용되지 않는 문자가 포함되어 있어요.");
+    }
+
     if (customCode !== "") {
-        fetch(`https://api.ssib.al/link/create?url=${document.getElementById("input").value}&code=${customCode}`, {
+        fetch(`https://api.ssib.al/link/create?url=${url}&code=${customCode}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -195,7 +213,7 @@ function apiRequest() {
         }));
     }
     else {
-        fetch(`https://api.ssib.al/link/create?url=${document.getElementById("input").value}`, {
+        fetch(`https://api.ssib.al/link/create?url=${url}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
