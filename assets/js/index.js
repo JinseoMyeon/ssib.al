@@ -28,6 +28,7 @@ if (storedTheme !== null) {
     changeThemeDark();
     localStorage.setItem("darkTheme", "true");
 } else {
+    darkmode = 0;
     changeThemeLight();
     localStorage.setItem("darkTheme", "false");
 }
@@ -70,7 +71,7 @@ document.getElementById("restClose").addEventListener("click", () => {
 
 if (document.getElementById("shortenResult")) {
     document.getElementById("shortenResult").addEventListener("click", () => {
-        const url = document.getElementById("resultLinkSuccess").innerText;
+        const url = "https://"+document.getElementById("resultLinkSuccess").innerText;
         if (url) {
             navigator.clipboard.writeText(`${url}`)
             .then(()=>{
@@ -131,4 +132,95 @@ function changeThemeLight() {
 
     document.getElementById("toggleThemeLight").classList.remove("disable");
     document.getElementById("toggleThemeDark").classList.add("disable");
+}
+
+function changeResult(success,description) {
+    if (success == 1) {
+        document.getElementById("resultLinkSuccess").classList.remove("disable");
+        document.getElementById("resultLinkFailed").classList.add("disable");
+        document.getElementById("resultImageSucceed").classList.remove("disable");
+        document.getElementById("resultImageFailed").classList.add("disable");
+        document.getElementById("resultText").innerText = "링크를 성공적으로 줄였어요!";
+
+        document.getElementById("shortenResult").style = "animation: resultSucceeded 5s ease-out;";
+        setTimeout(() => {
+            document.getElementById("shortenResult").style = "";
+        }, 5000);
+    }
+    else {
+        document.getElementById("resultLinkFailed").classList.remove("disable");
+        document.getElementById("resultLinkSuccess").classList.add("disable");
+        document.getElementById("resultImageSucceed").classList.add("disable");
+        document.getElementById("resultImageFailed").classList.remove("disable");
+
+        document.getElementById("resultLinkFailed").innerText = "링크를 줄이는 데 실패했어요.";
+        document.getElementById("resultText").innerText = description;
+
+        document.getElementById("shortenResult").style = "animation: resultSucceeded 5s ease-out;";
+        setTimeout(() => {
+            document.getElementById("shortenResult").style = "";
+        }, 5000);
+    }
+}
+
+function apiRequest() {
+    var customCode = document.getElementById("custom").value;
+    if (customCode !== "") {
+        fetch(`https://api.ssib.al/link/create?url=${document.getElementById("input").value}&code=${customCode}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+        }).then((response) => response.json().then((data) => {
+            if (data.response == 201) {
+                document.getElementById("resultLinkSuccess").innerText = "ssib.al/"+data.info.link_code;
+                changeResult(1);
+            }
+            if (data.response == 400) {
+                changeResult(0, "URL이 입력되지 않았어요.");
+            }
+            if (data.response == 405) {
+                changeResult(0, "단축 금지 사이트로 지정되어 있는 사이트에요.");
+            }
+            if (data.response == 406) {
+                changeResult(0, "URL이 존재하지 않거나 올바르지 않아요.");
+            }
+            if (data.response == 409) {
+                changeResult(0, "이미 누군가가 사용 중인 링크에요.");
+            }
+            if (data.response == 500) {
+                changeResult(0, "서버에서 오류가 발생했어요.");
+            }
+        }));
+    }
+    else {
+        fetch(`https://api.ssib.al/link/create?url=${document.getElementById("input").value}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+        }).then((response) => response.json().then((data) => {
+            if (data.response == 201) {
+                document.getElementById("resultLinkSuccess").innerText = "ssib.al/"+data.info.link_code;
+                changeResult(1);
+            }
+            if (data.response == 400) {
+                changeResult(0,  "URL이 입력되지 않았어요.");
+            }
+            if (data.response == 405) {
+                changeResult(0, "단축 금지 사이트로 지정되어 있는 사이트에요.");
+            }
+            if (data.response == 406) {
+                changeResult(0, "URL이 존재하지 않거나 올바르지 않아요.");
+            }
+            if (data.response == 409) {
+                changeResult(0, "이미 누군가가 사용 중인 링크에요.");
+            }
+            if (data.response == 500) {
+                changeResult(0, "서버에서 오류가 발생했어요.");
+            }
+        }));
+    }
 }
