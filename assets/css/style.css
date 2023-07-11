@@ -116,19 +116,26 @@ body {
 #shortenResult {
     position: fixed;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -200px);
     background-color: var(--white);
     border: 1px solid var(--sgray2);
-    animation: slider 0.5s;
     z-index: 5;
 }
 
-#resultImage {
+#resultImageSucceed {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 50%;
     z-index: 1;
+}
+
+#resultImageFailed {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    z-index: 2;
 }
 
 #resultLinkSuccess {
@@ -150,7 +157,7 @@ body {
 
 #resultText {
     position: absolute;
-    top: 65%;
+    top: 67.5%;
     transform: translate(0, -65%);
     color: var(--gray7);
     font-weight: 400;
@@ -413,6 +420,21 @@ body {
     stroke: var(--brand5);
 }
 
+@keyframes resultSucceeded {
+    0% {
+        transform: translate(-50%, -200px);
+    }
+    8% {
+        transform: translate(-50%, 0px);
+    }
+    92% {
+        transform: translate(-50%, 0px);
+    }
+    100% {
+        transform: translate(-50%, -200px);
+    }
+}
+
 @media screen and (min-width: 1025px) { /* for desktop and PC */
     .section {
         scroll-snap-align:center;
@@ -426,7 +448,13 @@ body {
         border-radius: 20px;
     }
 
-    #resultImage {
+    #resultImageSucceed {
+        left: 40px;
+        width: 55px;
+        height: 55px;
+    }
+
+    #resultImageFailed {
         left: 40px;
         width: 55px;
         height: 55px;
@@ -555,7 +583,7 @@ body {
         height: 62px;
         border-radius: 20px;
         font-size: 1.5rem;
-        text-indent: 102.5px;
+        text-indent: 104px;
     }
 
     .submit {
@@ -664,9 +692,8 @@ body {
         height: 85px;
     }
     #upperBlock2Icon {
-        display: none;
-        visibility: hidden;
-        top: 40%;
+        position: absolute;
+        top: 42.5%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 85px;
@@ -793,13 +820,18 @@ body {
 
     #shortenResult {
         top: 50px;
-        transform: translate(-50%, 0);
         width: 400px;
         height: 90px;
         border-radius: 20px;
     }
 
-    #resultImage {
+    #resultImageSucceed {
+        left: 30px;
+        width: 50px;
+        height: 50px;
+    }
+
+    #resultImageFailed {
         left: 30px;
         width: 50px;
         height: 50px;
@@ -933,7 +965,7 @@ body {
         max-height: 62px;
         border-radius: 20px;
         font-size: 1.4rem;
-        text-indent: 94.5px;
+        text-indent: 96px;
     }
 
     .submit {
@@ -1015,12 +1047,11 @@ body {
     }
     #upperBlock2Icon {
         position: absolute;
-        visibility: hidden;
-        top: 40%;
+        top: 37.5%;
         left: 45%;
         transform: translate(-40%, -40%);
-        width: 85px;
-        height: 85px;
+        width: 75px;
+        height: 75px;
     }
     #upperBlock3Icon {
         position: absolute;
@@ -1166,7 +1197,13 @@ body {
         border-radius: 15px;
     }
 
-    #resultImage {
+    #resultImageSucceed {
+        left: 7vw;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    #resultImageFailed {
         left: 7vw;
         width: 10vw;
         height: 10vw;
@@ -1323,7 +1360,7 @@ body {
         max-height: 55px;
         border-radius: 15px;
         font-size: 1.125rem;
-        text-indent: 74px;
+        text-indent: 75.5px;
     }
 
     .submit {
@@ -1419,11 +1456,10 @@ body {
     }
     #upperBlock2Icon {
         position: absolute;
-        visibility: hidden;
-        top: 5vw;
-        left: 7.25vw;
-        width: 17.5vw;
-        height: 17.5vw;
+        top: 5.5vw;
+        left: 8.5vw;
+        width: 15vw;
+        height: 15vw;
     }
     #upperBlock3Icon {
         position: absolute;
