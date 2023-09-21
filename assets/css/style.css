@@ -23,6 +23,58 @@
     --brand6 : #297DFC;
 }
 
+.header {
+    margin-top: 20px;
+    width: 100%;
+    height: 72px;
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner:hover {
+    background-color: var(--gray1);
+    border: 1px solid var(--gray2);
+    transition: background-color 0.3s;
+
+}
+
+.banner {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 12px;
+    cursor: pointer;
+
+    border-radius: 20px;
+    border: 1px solid var(--gray2);
+    background: var(--white);
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+.banner_text {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--igray6);
+}
+
+.logo_32 {
+    width: 32px;
+    height: 32px;
+}
+
+.b {
+    font-weight: 600;
+    color: var(--gray7);
+}
+
+.blue {
+    color: var(--brand6);
+}
+
 html {
     scroll-snap-type:y mandatory;
     scrollbar-width: none;
@@ -119,7 +171,7 @@ body {
     transform: translate(-50%, -200px);
     background-color: var(--white);
     border: 1px solid var(--sgray2);
-    z-index: 5;
+    z-index: 200;
 }
 
 #resultImageSucceed {
@@ -418,6 +470,23 @@ body {
 
 .svgStrkc1 {
     stroke: var(--brand5);
+}
+
+.policy_title {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.policy_title_text {
+    font-weight: 700;
+    color: var(--gray7);
+}
+
+.policy_title_subtext {
+    font-weight: 400;
+    color: var(--gray5);
 }
 
 @keyframes resultSucceeded {
@@ -1189,6 +1258,18 @@ body {
 }
 
 @media screen and (max-width: 767px) { /* for mobile */
+
+    .banner {
+        width: 85vw;
+        margin-inline: 7vw;
+        display: flex;
+        padding: 2vw 4vw;
+        border-radius: 16px;
+    }
+
+    .banner_text {
+        font-size: 2.75vw;
+    }
 
     #shortenResult {
         top: 5vh;
