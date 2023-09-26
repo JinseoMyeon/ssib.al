@@ -71,8 +71,8 @@ document.getElementById("restClose").addEventListener("click", () => {
 
 if (document.getElementById("shortenResult")) {
     document.getElementById("shortenResult").addEventListener("click", () => {
-        const url = "https://"+document.getElementById("resultLinkSuccess").innerText;
-        if (url) {
+        if (document.getElementById("resultLinkSuccess").innerText !== "") {
+            const url = "https://"+document.getElementById("resultLinkSuccess").innerText;
             navigator.clipboard.writeText(`${url}`)
             .then(()=>{
                 alert(`링크를 클립보드에 성공적으로 복사했어요!`);
